@@ -1,0 +1,42 @@
+/* Christopher Barber April 1st 2024 */
+html {    
+    background-image: url(../images/westbrick/flooded-lease.jpeg);  	
+	background-repeat: no-repeat;		
+	background-position: center;	
+	background-attachment: fixed;
+    background-size: cover;
+}
+.westbrick-404-svg {
+    width: 100%;      
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.westbrick-404-svg-container {
+    margin-top: 20vh;
+    max-width: 90%;  
+    width: 1100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px;
+    border-style: solid;
+    border-color: rgba(220, 164, 19, 1);
+    background-color: rgba(200, 144, 0, 0.3);
+    padding: 50px;
+    border-radius: 20px;
+}
+.home-button {
+    display: block;
+    margin: 30px auto 0px auto;
+    background-color: rgba(220, 164, 19, 1);
+    width: 100px;
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.home-button:hover {
+    background-color: rgba(250, 184, 0, 1);
+}
