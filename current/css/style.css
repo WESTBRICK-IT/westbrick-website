@@ -2337,6 +2337,7 @@ p {
     padding-bottom: 10px;
     border-radius: 15px;
     margin: 10px;
+    padding-right: 10px;
 }
 .staff-member:nth-child(2n) {
     /* background-color: rgba(250, 250, 250, 0.3);  */
@@ -2874,6 +2875,9 @@ p {
     }
 }
 @media screen and (max-width: 768px) { 
+    .staff-member {
+        padding-right: 0px;
+    }
     .drilling-inventory-section {
         padding-left: 50px;
         padding-right: 50px;
