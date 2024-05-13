@@ -2464,11 +2464,18 @@ p {
 }
 .drilling-inventory-section {
     padding: 120px;
+    padding-left: 300px;    
+    padding-right: 300px;    
 }
 .drilling-inventory-list {
     font-size: 22px;
-    padding-top: 40px;
-    
+    padding-top: 40px;            
+}
+.drilling-inventory-list li {    
+    list-style-type: disc; 
+}
+.drilling-inventory-list li::marker {
+    color: rgb( 220, 164, 19);
 }
 .drilling-inventory-table-2 {
     max-width: 100%;
@@ -2624,6 +2631,10 @@ p {
     .significant-delineations-map {
         margin-left: 40px;
     }
+    .drilling-inventory-section {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
 }
 @media screen and (max-width: 1500px) {
     .financial-lookback-section {
@@ -2746,6 +2757,10 @@ p {
     }
 }
 @media screen and (max-width: 992px) {
+    .drilling-inventory-section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
     .westbrick-sideways-hats {
         display: none;
     }
