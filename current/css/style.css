@@ -2597,6 +2597,9 @@ p {
 .presentations-president-letter {
     margin-top: 50px;
 }
+.join-us-section-heading {
+    font-size: 16px;
+}
 @media screen and (min-width: 2000px) {
     .significant-delineations-section {
         padding-left: 100px;        
