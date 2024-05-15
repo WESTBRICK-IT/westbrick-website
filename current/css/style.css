@@ -2568,6 +2568,7 @@ p {
     padding-top: 40px;
     font-size: 24px;
     padding-left: 22px;
+    line-height: normal;
 }
 .after-tax-return-list li{
     padding-top: 10px;
@@ -2599,6 +2600,9 @@ p {
 }
 .join-us-section-heading {
     font-size: 16px;
+}
+.join-us-section-heading .section_heading{
+    margin-bottom: 19px;
 }
 @media screen and (min-width: 2000px) {
     .significant-delineations-section {
