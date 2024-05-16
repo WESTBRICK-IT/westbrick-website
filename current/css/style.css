@@ -2480,10 +2480,11 @@ p {
 }
 .drilling-inventory-table-2 {
     max-width: 100%;
-    width: 450px;
-    padding-top: 100px;
+    
+    /* width: 500px; */
+    /* padding-top: 100px;
     margin: 0 auto;
-    display: block;
+    display: block;     */
 }
 .drilling-inventory-tables {
     display: flex;
@@ -2694,6 +2695,9 @@ p {
     }
 }
 @media screen and (max-width: 1200px) { 
+    .drilling-inventory-table-2 {
+        margin-top: 20px;
+    }
     .presentations {
         margin-left: 50px;
         margin-right: 50px;
