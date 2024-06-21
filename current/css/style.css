@@ -1875,6 +1875,18 @@ p {
     /* text-decoration: underline;
     text-decoration-color:rgb( 220, 164, 19); */
 }
+.esg-title-pending-review {
+    
+    font-size: 40px;
+    
+    margin-bottom: 0;
+}
+.esg-underline-pending-review {        
+    
+}
+.esg-pending-review {
+    margin-top: 100px;    
+}
 .esg-pre-title {
     margin: 0;
     color: #919191;
