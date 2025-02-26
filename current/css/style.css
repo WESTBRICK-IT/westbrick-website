@@ -6333,3 +6333,15 @@ p {
     font-weight: bold;
     margin-bottom: 15px !important;
 }
+
+.whole-press-release {
+    display: block;
+    margin: 0 auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.press-release {
+    font-size: 20px;
+}
