@@ -5242,7 +5242,12 @@ p {
 
 }
 
+.whole-press-release img{
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
 
+}
 
 @media screen and (min-width: 2000px) {
 
@@ -6275,6 +6280,11 @@ p {
 }
 
 @media screen and (max-width: 476px) {
+    .whole-press-release img{
+        
+        max-width: 100%;
+    
+    }
 
     .operating-philosophy-title {
 
@@ -6340,7 +6350,9 @@ p {
     margin-left: 10px;
     margin-right: 10px;
     text-align: center;
+    max-width: 100%;
 }
+
 
 .press-release {
     font-size: 20px;
