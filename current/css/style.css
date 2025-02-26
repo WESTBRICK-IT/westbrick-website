@@ -1,3163 +1,6335 @@
 
+
 /* Edited by Christopher Barber December 2023 */
+
 /*----------------------------------------------------------------------------------
+
  1. body Start
+
 ----------------------------------------------------------------------------------*/
+
 html{
+
     scroll-behavior: smooth
+
 }
+
 body{
+
 	font-family: Arial, Helvetica, sans-serif;
+
 	margin: 0;
+
 	padding: 0;
+
 	line-height: 1.42857143;
+
 	font-size: 14px;
+
 	color: rgb( 27, 27, 27);
+
 	-webkit-font-smoothing: antialiased;        
+
 }
+
 h1,h2,h3,h4{
+
     color: rgb(27,27,27);
+
 }
+
 ::selection {
+
     background: rgb(220, 164, 19);
+
     color: #ffffff;
+
 }
+
 ::-moz-selection {
+
     background: rgb(220, 164, 19);
+
     color: #ffffff;
+
 }
+
 ::-webkit-selection {
+
     background: rgb(220, 164, 19);
+
     color: #ffffff;
+
 }
+
 /*----------------------------------------------------------------------------------
+
  1. body End
+
 ----------------------------------------------------------------------------------*/
 
+
+
 /*----------------------------------------------------------------------------------
+
  2. common css Start
+
 ----------------------------------------------------------------------------------*/
+
 a{
+
     cursor: pointer;
+
     text-decoration: none;
+
 }
+
 a, input, button{
+
     -webkit-transition: all ease-in 0.3s;
+
     -moz-transition: all ease-in 0.3s;
+
     -ms-transition: all ease-in 0.3s;
+
     -o-transition: all ease-in 0.3s;
+
     transition: all ease-in 0.3s;
+
 }
+
 a:focus, input:focus, button:focus, textarea:focus {
+
     outline: none;
+
     box-shadow: none !important;
+
     -webkit-box-shadow: none !important;
+
     text-decoration: none;
+
 }
+
 a:after, button:after, 
+
 a:before, button:before{
+
     -webkit-transition: all ease-in 0.3s;
+
     -moz-transition: all ease-in 0.3s;
+
     -ms-transition: all ease-in 0.3s;
+
     -o-transition: all ease-in 0.3s;
+
     transition: all ease-in 0.3s;
+
 }
+
 .full_width{
+
 	float: left;
+
 	width: 100%;
+
 }
+
 .gs_section{
+
 	float: left;
+
 	width: 100%;
+
 }
+
 .section_heading{
+
     float: left;
+
     width: 100%;
+
     padding: 0 15px;
+
     margin-bottom: 50px;
+
     text-align: center;
+
 }
+
 .section_heading h2 {
+
     color: rgb(27,27,27);
+
     font-size: 30px;
+
     font-weight: 600;
+
     margin-top: 0;
+
     margin-bottom:0px;
+
 }
+
 .section_heading h2 span {
+
     color: rgb(220, 164, 19);
+
 }
 
+
+
 /*===== button css start ======*/
+
 .gs_read_m {
+
     display: inline-block;
+
     height: 45px;
+
     line-height: 45px;
+
     color: #fff;
+
     font-size: 15px;
+
     font-weight: 500;
+
     text-decoration: none;
+
     background-color:transparent;
+
     padding: 0 35px;
+
     position: relative;
+
     border: 1px solid transparent;
+
     z-index: 9;
+
     overflow: hidden;
+
 }
+
 .gs_read_m:after {
+
     position: absolute;
+
     content: "";
+
     left: 0;
+
     top: 0;
+
     width: 100%;
+
     height: 100%;
+
     background-color: rgb(220, 164, 19);
+
     z-index: -9;
+
     /* transform: translateX(100%); */
+
 }
+
 .gs_read_m:hover, 
+
 .gs_read_m:focus{
+
     text-decoration: none;
+
     color: rgb(220, 164, 19);
+
     border: 1px solid;
+
 }
+
 .gs_read_m:hover:after, 
+
 .gs_read_m:focus:after{
+
   -webkit-transform: translateX(100%);
+
   -moz-transform: translateX(100%);
+
   -ms-transform: translateX(100%);
+
   -o-transform: translateX(100%);
+
   transform: translateX(100%);
+
 }
+
 .pad_top_80{
+
     padding-top: 80px;
+
 }
+
 .pad_top_bottom_80{
+
     padding: 80px 0;
+
 }
+
 /*===== button css start ======*/
+
 /*----------------------------------------------------------------------------------
+
  2. common css End
-----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------
- 3. Preloader css Start
-----------------------------------------------------------------------------------*/
-.preloader {
-    position: fixed;
-    z-index: 9999;
-    background: #ffffff;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    text-align: center;
-}
-.preloader_inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 90px;
-    transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    -o-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-}
-.loading_icon img {
-    display: inline-block;
-    max-width: 100%;
-}
-/*----------------------------------------------------------------------------------
- 3. Preloader css End
+
 ----------------------------------------------------------------------------------*/
 
 /*----------------------------------------------------------------------------------
- 4. header Top css Start
+
+ 3. Preloader css Start
+
 ----------------------------------------------------------------------------------*/
+
+.preloader {
+
+    position: fixed;
+
+    z-index: 9999;
+
+    background: #ffffff;
+
+    left: 0;
+
+    top: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    text-align: center;
+
+}
+
+.preloader_inner {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    width: 90px;
+
+    transform: translate(-50%,-50%);
+
+    -webkit-transform: translate(-50%,-50%);
+
+    -ms-transform: translate(-50%,-50%);
+
+    -o-transform: translate(-50%,-50%);
+
+    -moz-transform: translate(-50%,-50%);
+
+}
+
+.loading_icon img {
+
+    display: inline-block;
+
+    max-width: 100%;
+
+}
+
+/*----------------------------------------------------------------------------------
+
+ 3. Preloader css End
+
+----------------------------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------------------------------------
+
+ 4. header Top css Start
+
+----------------------------------------------------------------------------------*/
+
 .gs_top_header {
+
     background-color: rgb(27,27,27);
+
     padding: 15px 0;
+
 }
+
 .header_top_left {
+
     float: left;
+
     width: 100%;
+
 }
+
 .header_top_left > div {
+
     float: left;
+
 }
+
 .header_top_left .header_text {
+
     padding-top: 5px;
+
 }
+
 .header_top_left .language_select {
+
     padding-left: 20px;
+
 }
+
 .language_select > i {
+
     color: rgb(220, 164, 19);
+
     float: left;
+
     padding-top: 9px;
+
 }
+
 .language_select .select_wrapper {
+
     position: relative;
+
     float: left;
+
 }
+
 .language_select select {
+
     background: transparent;
+
     border: none;
+
     -webkit-appearance: none;
+
     -moz-appearance: none;
+
     /* noFocusLine: expression(this.hideFocus=true); */
+
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+
     filter: alpha(opacity=0);
+
     -khtml-opacity: 0;
+
     -moz-opacity: 0;
+
     -webkit-appearance: none;
+
     -moz-appearance: none;
+
     appearance: none;
+
     cursor: pointer;
+
     min-width: 79px;
+
     height: 30px;
+
     padding: 0 15px;
+
 }
+
+
 
 .language_select select:focus {
+
     outline: none;
+
     -webkit-outline: none;
+
     -moz-outline: none;
+
 }
+
 .language_select .select_wrapper span {
+
     position: absolute;
+
     top: 50%;
+
     right: 0;
+
     pointer-events: none;
+
     margin-top: -8.5px;
+
     color: rgb(220, 164, 19);
+
     font-size: 12px;
+
 }
+
 .header_text p {
+
     color: #fff;
+
     margin-bottom: 0;
+
 }
+
 .header_top_right {
+
     float: right;
+
     color: #fff;
+
     padding-top: 5px;
+
 }
+
 .header_top_right p {
+
     margin-bottom: 0;
+
 }
+
 .header_top_right p i {
+
     color: rgb(220, 164, 19);
+
     padding-right: 6px;
+
 }
-/*----------------------------------------------------------------------------------
- 4. header Top css End
-----------------------------------------------------------------------------------*/
 
 /*----------------------------------------------------------------------------------
- 5. header Middle css Start
+
+ 4. header Top css End
+
 ----------------------------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------------------------------------
+
+ 5. header Middle css Start
+
+----------------------------------------------------------------------------------*/
+
 .gs_middle_header {
+
     background: rgb(254, 254, 254);
+
     padding: 35px 0;
+
 }
+
 .gs_logo {
+
     /* float: left; */
+
 }
+
 .gs_logo a{
+
     /* display: inline-block; */
+
 }
+
 .gs_logo a img{
+
     max-width: 100%;
+
     /* display: inline-block; */
+
 }
+
 .gs_header_contacts{
+
     float: left;
+
     width: 100%;
+
 }
+
+
 
 .gs_header_contacts ul {
+
     list-style: none;
+
     padding-left: 0;
+
     margin: 0;
+
     overflow: hidden;
+
 }
+
 .gs_header_contacts ul li {
+
     float: left;
+
     width: 33.33%;    
+
 }
+
 .gs_header_contacts ul li:last-child {
+
     padding-right: 0;
+
 }
+
 .gs_header_contacts ul li div{
+
     display: table-cell;
+
 }
+
 .gs_header_contacts ul li .con_icons {
+
     vertical-align: top;
+
 }
+
 .gs_header_contacts ul li .con_icons i {
+
     color: rgb(220, 164, 19);
+
     font-size: 20px;
+
     height: 40px;
+
     line-height: 40px;
+
     width: 40px;
+
     border: 1px solid;
+
     text-align: center;
+
     position: relative;
+
     z-index: 1;
+
     -webkit-transition: all ease-in 0.3s;
+
     -moz-transition: all ease-in 0.3s;
+
     -ms-transition: all ease-in 0.3s;
+
     -o-transition: all ease-in 0.3s;
+
     transition: all ease-in 0.3s;
+
 }
+
+
 
 .gs_header_contacts ul li .con_icons i:after {
+
     position: absolute;
+
     content: "";
+
     left: 0;
+
     top: 0;
+
     width: 100%;
+
     height: 100%;
+
     background-color: rgb(220, 164, 19);
+
     z-index: -1;
+
     -webkit-transition: all ease-in 0.3s;
+
     -moz-transition: all ease-in 0.3s;
+
     -ms-transition: all ease-in 0.3s;
+
     -o-transition: all ease-in 0.3s;
+
     transition: all ease-in 0.3s;
+
     opacity: 0;
+
     -webkit-transform: scale(0.5);
+
     -moz-transform: scale(0.5);
+
     -ms-transform: scale(0.5);
+
     -o-transform: scale(0.5);
+
     transform: scale(0.5);
+
 }
+
 .gs_header_contacts ul li .con_icons:hover i{
+
     color: #ffffff;
+
     border-color: rgb(220, 164, 19);
+
 }
+
 .gs_header_contacts ul li .con_icons:hover i:after {
+
     opacity: 1;
+
     -webkit-transform: scale(1);
+
     -moz-transform: scale(1);
+
     -ms-transform: scale(1);
+
     -o-transform: scale(1);
+
     transform: scale(1);
+
 }
+
 .gs_header_contacts .con_details {
+
     padding-left: 15px;
+
     vertical-align: top;
+
 }
+
 .con_details h4 {
+
     color: rgb(27,27,27);
+
     font-size: 16px;
+
     font-weight: 500;
+
     margin-top: 0;
+
     margin-bottom: 7px;
+
 }
+
 .con_details p {
+
     font-size: 12px;
+
     line-height: 21px;
+
     margin-bottom: 0;
+
 }
+
 .con_details p a {
+
     text-decoration: none;
+
     color: #919191;
+
 }
+
 .con_details p a:hover {
+
     color: rgb(220, 164, 19);
+
 }
+
 .emergency-phone-number {
+
     color: red;
+
     font-weight: bolder;
+
     /* font-size: 10px !important; */
+
 }
+
 .emergency-phone-number a {
+
     color: red !important;
+
 }
+
 /*----------------------------------------------------------------------------------
+
  5. header Middle css End
+
 ----------------------------------------------------------------------------------*/
+
 /*----------------------------------------------------------------------------------
+
  6. Navigation Header css Start
+
 ----------------------------------------------------------------------------------*/
+
 .gs_navigation_header {
+
     margin-bottom: -40px;
+
     position: relative;
+
     z-index: 9;
+
 }
+
+
 
 .Navigation_wrapper {
+
     float: left;
+
     width: 100%;
+
     background-color: rgb(27,27,27);
+
     height: 75px;
-}
-.gs_navigation {
-    float: left;
-    width: 100%;
-}
-.gs_navigation ul {
-    padding-left: 0;
-    list-style: none;
-    margin-bottom: 0;
-    float: left;
-}
-.gs_navigation > ul > li {
-    float: left;
-    padding: 24px 18px;
-}
-.gs_navigation > ul > li > a {
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    text-transform: capitalize;
-    position: relative;
-    padding: 5px;
-    display: inline-block;
-}
-.gs_navigation > ul > li > a:after {
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: 0px;
-    width: 0%;
-    height: 1px;
-    background: rgb(220, 164, 19);
-}
-.gs_navigation > ul > li > a:hover:after {
-    width: 100%;
-}
-.gs_navigation > ul > li > a:hover {
-    color: rgb(220, 164, 19);
-    text-decoration: none;
-}
-.dropdown-content {
-    float: left;    
-    padding-left: 0;
-    list-style: none;
-    margin-bottom: 0;
-    float: left;
-}
-.dropdown-content a {
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    text-transform: capitalize;
-    position: relative;
-    padding: 5px;
-    display: inline-block;
-}
-.dropdown-content a:after {
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: 0px;
-    width: 0%;
-    height: 1px;
-    background: rgb(220, 164, 19);
-}
-.dropdown-content a:hover:after {
-    width: 100%;
-}
-.dropdown-content a:hover {
-    color: rgb(220, 164, 19);
-    text-decoration: none;
+
 }
 
-/* ====nav search form css ==== */
-.gs_navigation .nav_form {
-    float: right;
-    padding-top: 20px;
+.gs_navigation {
+
+    float: left;
+
+    width: 100%;
+
 }
-.nav_form .form_group{
+
+.gs_navigation ul {
+
+    padding-left: 0;
+
+    list-style: none;
+
+    margin-bottom: 0;
+
+    float: left;
+
+}
+
+.gs_navigation > ul > li {
+
+    float: left;
+
+    padding: 24px 18px;
+
+}
+
+.gs_navigation > ul > li > a {
+
+    color: #fff;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    text-transform: capitalize;
+
     position: relative;
+
+    padding: 5px;
+
+    display: inline-block;
+
 }
+
+.gs_navigation > ul > li > a:after {
+
+    position: absolute;
+
+    content: "";
+
+    left: 0;
+
+    bottom: 0px;
+
+    width: 0%;
+
+    height: 1px;
+
+    background: rgb(220, 164, 19);
+
+}
+
+.gs_navigation > ul > li > a:hover:after {
+
+    width: 100%;
+
+}
+
+.gs_navigation > ul > li > a:hover {
+
+    color: rgb(220, 164, 19);
+
+    text-decoration: none;
+
+}
+
+.dropdown-content {
+
+    float: left;    
+
+    padding-left: 0;
+
+    list-style: none;
+
+    margin-bottom: 0;
+
+    float: left;
+
+}
+
+.dropdown-content a {
+
+    color: #fff;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    text-transform: capitalize;
+
+    position: relative;
+
+    padding: 5px;
+
+    display: inline-block;
+
+}
+
+.dropdown-content a:after {
+
+    position: absolute;
+
+    content: "";
+
+    left: 0;
+
+    bottom: 0px;
+
+    width: 0%;
+
+    height: 1px;
+
+    background: rgb(220, 164, 19);
+
+}
+
+.dropdown-content a:hover:after {
+
+    width: 100%;
+
+}
+
+.dropdown-content a:hover {
+
+    color: rgb(220, 164, 19);
+
+    text-decoration: none;
+
+}
+
+
+
+/* ====nav search form css ==== */
+
+.gs_navigation .nav_form {
+
+    float: right;
+
+    padding-top: 20px;
+
+}
+
+.nav_form .form_group{
+
+    position: relative;
+
+}
+
+
 
 .nav_form input.nav_search {
+
     background-color: #171717;
+
     border: none;
+
     height: 40px;
+
     color: #ffffff;
+
     padding: 0 42px 0 15px;
+
     width: 200px;
+
 }
+
 .nav_form .search_icon {
+
     color: #ffffff;
+
     background-color: rgb(220, 164, 19);
+
     position: absolute;
+
     top: 0;
+
     right: 0;
+
     height: 40px;
+
     width: 40px;
+
     line-height:38px;
+
     text-align: center;
+
     cursor: pointer;
+
     border: 1px solid transparent;
+
 }
+
 .nav_form .search_icon:hover, 
+
 .nav_form .search_icon:focus{
+
     color: rgb(220, 164, 19);
+
     background-color: transparent;
+
     border-left: 1px solid;
+
 }
+
 /* ====nav search form css ==== */
+
 .get_quote {
+
     float: right;
+
     color: #ffffff;
+
     background-color: rgb(220, 164, 19);
+
     height: 80px;
+
     line-height: 80px;
+
     padding: 0 50px;
+
     font-weight: 500;
+
     font-size: 14px;
+
 }
+
 .get_quote:hover {
+
     color: rgb(27,27,27);
+
     text-decoration: none;
+
     background-color: #f9f9f9;  
+
 }
 
 
+
+
+
 /*=== nav toggle css ===*/
+
 .nav_toggle {
+
     position: relative;
+
     z-index: 9999;
+
     cursor: pointer;
+
     width: 35px;
+
     height: 20px;
+
     float: right;
+
     margin-top: 33px;
+
     margin-right: 25px;
+
 }
+
 .nav_toggle i {
+
     float: left;
+
     width: 100%;
+
     background: rgb(220, 164, 19);
+
     height: 4px;
+
     margin-bottom: 3px;
+
     border-radius: 2em;
+
     transition:all ease-in 0.25s;
+
     -moz-transition:all ease-in 0.25s;
+
     -webkit-transition:all ease-in 0.25s;
+
 }
+
 .nav_toggle:hover i:nth-child(2){
+
     width:90%;
+
 }
+
 .nav_toggle:hover i:nth-child(3){
+
     width:80%;
+
 }
+
 .nav_toggle.toggle_open i:first-child {
+
     transform: translateY(12px) rotate(45deg);
+
     -webkit-transform: translateY(12px) rotate(45deg);
+
     -moz-transform: translateY(12px) rotate(45deg);
+
     -ms-transform: translateY(12px) rotate(45deg);
+
     -o-transform: translateY(12px) rotate(45deg);
+
     margin: 0;
+
     width:100%;
+
 }
+
 .nav_toggle.toggle_open i:nth-child(2) {
+
     transform: translateY(8px) rotate(-45deg);
+
     -webkit-transform: translateY(8px) rotate(-45deg);
+
     -moz-transform: translateY(8px) rotate(-45deg);
+
     -ms-transform: translateY(8px) rotate(-45deg);
+
     -o-transform: translateY(8px) rotate(-45deg);
+
     margin: 0;
+
     width:100%;
+
 }
+
 .nav_toggle.toggle_open i:nth-child(3) {
+
     transform: translateY(-50px) rotate(90deg);
+
     -webkit-transform: translateY(-50px) rotate(90deg);
+
     -moz-transform: translateY(-50px) rotate(90deg);
+
     -ms-transform: translateY(-50px) rotate(90deg);
+
     -o-transform: translateY(-50px) rotate(90deg);
+
     opacity: 0;
+
     visibility: hidden;
+
 }
+
 /*=== nav toggle css ===*/
+
 /*----------------------------------------------------------------------------------
+
  6. Navigation Header css End
+
 ----------------------------------------------------------------------------------*/
+
 /*----------------------------------------------------------------------------------
+
  7. Home Banner Section Start
+
 ----------------------------------------------------------------------------------*/
+
 .gs_home_banner{
 
+
+
 }
+
 .banner_slider{
+
     float: left;
+
     width: 100%;
+
 }
+
 .banner_slider .slides {
+
     position: relative;
+
     z-index: 1;
+
     background-size: cover; 
+
     background-position: center center;
+
     height: 520px;
+
 }
+
 .banner_slider .slides:after{
+
     position: absolute;
+
     content: "";
+
     /* width: 100%;
+
     height: 100%; */
+
     left: 0;
+
     top: 0;
+
     /* background-color:rgb(27,27,27); */
+
     /* opacity: 0.5; */
+
 	z-index:-1;
+
 }
+
 .slider_caption {
+
     padding: 100px 0;
+
 }
+
 .slider_caption h2 {
+
     font-size: clamp(35px,40px, 3vw);
+
     color: #fff;    
+
     -webkit-text-stroke-color: rgb(27,27,27);
+
     -webkit-text-stroke-width: .08vw;
+
     /* text-transform: uppercase; */
+
     line-height: 70px;
+
     background-color: rgba(0, 0, 0, 0.50);
+
     padding: 50px;
+
     border-radius: 20px;
+
     font-weight: bold;
+
 }
+
 .banner_slider .owl-nav div {
+
     position: absolute;
+
     top: 50%;
+
     -webkit-transform: translateY(-50%);
+
     -moz-transform: translateY(-50%);
+
     -ms-transform: translateY(-50%);
+
     -o-transform: translateY(-50%);
+
     transform: translateY(-50%);
+
     opacity: 0;
+
     -webkit-transition: all ease-in 0.25s;
+
     -moz-transition: all ease-in 0.25s;
+
     -ms-transition: all ease-in 0.25s;
+
     -o-transition: all ease-in 0.25s;
+
     transition: all ease-in 0.25s;   
+
 }
+
 .banner_slider .owl-nav .owl-prev{
+
     left: 0;
+
 }
+
 .banner_slider .owl-nav .owl-next {
+
     right: 0;
+
 }
+
 .banner_slider:hover .owl-nav .owl-prev {
+
     left: 10px;
+
     opacity: 1;
+
 }
+
 .banner_slider:hover .owl-nav .owl-next {
+
     right: 10px;
+
     opacity: 1;
+
 }
+
 /*----------------------------------------------------------------------------------
+
  7. Home Banner Section End
-----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------
- 7. About Section css Start
-----------------------------------------------------------------------------------*/
-.gs_about_section{
-    padding: 320px 0 80px 0;
-}
-.about_desc {
-    float: left;
-    width: 100%;
-}
-.about_thumb img {
-    display: inline-block;
-}
-.about_desc h2 {
-    color: rgb(27,27,27);
-    font-size: 30px;
-    font-weight: 600;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-.about_desc h2 span {
-    color: rgb(220, 164, 19);
-}
-.about_desc p {
-    line-height: 24px;
-    margin-bottom: 25px;
-    font-size: 18px;
-}
-.about_desc .about_box {
-    
-}
-.about_img_box h4{
-    font-size: 18px;
-    color: rgb(27,27,27);
-    margin-top: 15px;
-}
-.about-blurb {
-    text-align: left;
-    /* text-indent: 10px; */
-    color: black;
-    font-size: 20px;    
-}
-/*----------------------------------------------------------------------------------
- 7. About Section css End
-----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------
- 8. service Section css Start
-----------------------------------------------------------------------------------*/
-.gs_service_section{
-    padding-top: 80px;
-    background-color: #F9F9F9;
-    padding-bottom: 50px;
-}
-.gs_service_box {
-    float: left;
-    width: 100%;
-    border: 1px solid rgb(220, 164, 19);
-    background-color: #ffffff;
-    margin-bottom: 30px;
-    vertical-align: middle;
-}
-.gs_service_box .service_icon {
-    display: table-cell;    
-    vertical-align: middle;
-}
-.service_icon i {
-    width: 70px;
-    height: 70px;
-    line-height: 68px;
-    float: left;
-    color: #ffffff;
-    text-align: center;
-    font-size: 34px;
-    border: 1px solid rgb(220, 164, 19);
-    position: relative;
-    z-index: 1;
-    -webkit-transition: all ease-in 0.3s;
-    -moz-transition: all ease-in 0.3s;
-    -ms-transition: all ease-in 0.3s;
-    -o-transition: all ease-in 0.3s;
-    transition: all ease-in 0.3s;
-}
-.service_icon i:after{
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgb(220, 164, 19);
-    z-index: -1;
-    -webkit-transition: all ease-in 0.3s;
-    -moz-transition: all ease-in 0.3s;
-    -ms-transition: all ease-in 0.3s;
-    -o-transition: all ease-in 0.3s;
-    transition: all ease-in 0.3s;
-}
-.gs_service_box .service_detail{
-    display: table-cell;
-    padding: 10px; 
-    vertical-align: middle;
-}
-.gs_service_box h4{
-    margin: 0;
-    vertical-align: middle;
-}
-.gs_service_box p{
-    margin: 0;
-    vertical-align: middle;
-}
-.service_detail {
-    vertical-align: middle;    
-}
-.service_detail h4 {
-    text-transform: capitalize;
-    vertical-align: middle;
-}
-.service_detail p {
-    line-height: 22px;
-}
-.gs_service_box:hover .service_icon i{
-    color: rgb(220, 164, 19);
-}
-.gs_service_box:hover .service_icon i:after{
-    opacity: 0;
-    -webkit-transform: scale(0.5);
-    -moz-transform: scale(0.5);
-    -ms-transform: scale(0.5);
-    -o-transform: scale(0.5);
-    transform: scale(0.5);
-}
-.westbrick-map {
-    max-width: 100%;
-}
-.operations-paragraph-stats-section {    
-}
-.operations-paragraph-stats-section p {
-    
-}
-/*----------------------------------------------------------------------------------
- 8. service Section css End
-----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------
- 9. work process Section css Start
+
 ----------------------------------------------------------------------------------*/
 
-/*==== progress bar css ====*/
-.gs_progress_bar{
-    float: left;
-    width: 100%;
-    margin-bottom: 50px;
-    position: relative;
+/*----------------------------------------------------------------------------------
+
+ 7. About Section css Start
+
+----------------------------------------------------------------------------------*/
+
+.gs_about_section{
+
+    padding: 320px 0 80px 0;
+
 }
-.gs_progress_bar > ul {
+
+.about_desc {
+
     float: left;
+
     width: 100%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+
 }
-.gs_progress_bar > ul > li {
-    float: left;
-    width: 100%;
-    margin-bottom: 40px;
-}
-.progress_header h4 {
-    font-size: 16px;
-    font-weight: 400;
+
+.about_thumb img {
+
     display: inline-block;
+
 }
-.progress_header span {
-    font-size: 16px;
+
+.about_desc h2 {
+
     color: rgb(27,27,27);
-    float: right;
-    margin-top: 8px;
-    position: absolute;
-    right: 0;
+
+    font-size: 30px;
+
+    font-weight: 600;
+
+    margin-top: 0;
+
+    margin-bottom: 15px;
+
 }
-.progress_panel {
+
+.about_desc h2 span {
+
+    color: rgb(220, 164, 19);
+
+}
+
+.about_desc p {
+
+    line-height: 24px;
+
+    margin-bottom: 25px;
+
+    font-size: 18px;
+
+}
+
+.about_desc .about_box {
+
+    
+
+}
+
+.about_img_box h4{
+
+    font-size: 18px;
+
+    color: rgb(27,27,27);
+
+    margin-top: 15px;
+
+}
+
+.about-blurb {
+
+    text-align: left;
+
+    /* text-indent: 10px; */
+
+    color: black;
+
+    font-size: 20px;    
+
+}
+
+/*----------------------------------------------------------------------------------
+
+ 7. About Section css End
+
+----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------
+
+ 8. service Section css Start
+
+----------------------------------------------------------------------------------*/
+
+.gs_service_section{
+
+    padding-top: 80px;
+
+    background-color: #F9F9F9;
+
+    padding-bottom: 50px;
+
+}
+
+.gs_service_box {
+
+    float: left;
+
     width: 100%;
+
     border: 1px solid rgb(220, 164, 19);
-    height: 10px;
-    border-radius: 2em;
+
+    background-color: #ffffff;
+
+    margin-bottom: 30px;
+
+    vertical-align: middle;
+
+}
+
+.gs_service_box .service_icon {
+
+    display: table-cell;    
+
+    vertical-align: middle;
+
+}
+
+.service_icon i {
+
+    width: 70px;
+
+    height: 70px;
+
+    line-height: 68px;
+
+    float: left;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    font-size: 34px;
+
+    border: 1px solid rgb(220, 164, 19);
+
     position: relative;
+
+    z-index: 1;
+
+    -webkit-transition: all ease-in 0.3s;
+
+    -moz-transition: all ease-in 0.3s;
+
+    -ms-transition: all ease-in 0.3s;
+
+    -o-transition: all ease-in 0.3s;
+
+    transition: all ease-in 0.3s;
+
 }
-.progress_panel .progress_slide {
+
+.service_icon i:after{
+
     position: absolute;
-    width: 2%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgb(220, 164, 19);
-    transition: all ease-in 1.5s;
-    -webkit-transition: all ease-in 1.5s;
-    -moz-transition: all ease-in 1.5s;
-}
-.progress_slide:after {
-    position: absolute;
+
     content: "";
-    height: 10px;
-    width: 11px;
+
+    width: 100%;
+
+    height: 100%;
+
+    left: 0;
+
     top: 0;
-    right: -10px;
+
     background-color: rgb(220, 164, 19);
-    border-radius: 50%;
-    margin-top: -1px;
-    border-left: 1px solid #fff;
+
+    z-index: -1;
+
+    -webkit-transition: all ease-in 0.3s;
+
+    -moz-transition: all ease-in 0.3s;
+
+    -ms-transition: all ease-in 0.3s;
+
+    -o-transition: all ease-in 0.3s;
+
+    transition: all ease-in 0.3s;
+
 }
+
+.gs_service_box .service_detail{
+
+    display: table-cell;
+
+    padding: 10px; 
+
+    vertical-align: middle;
+
+}
+
+.gs_service_box h4{
+
+    margin: 0;
+
+    vertical-align: middle;
+
+}
+
+.gs_service_box p{
+
+    margin: 0;
+
+    vertical-align: middle;
+
+}
+
+.service_detail {
+
+    vertical-align: middle;    
+
+}
+
+.service_detail h4 {
+
+    text-transform: capitalize;
+
+    vertical-align: middle;
+
+}
+
+.service_detail p {
+
+    line-height: 22px;
+
+}
+
+.gs_service_box:hover .service_icon i{
+
+    color: rgb(220, 164, 19);
+
+}
+
+.gs_service_box:hover .service_icon i:after{
+
+    opacity: 0;
+
+    -webkit-transform: scale(0.5);
+
+    -moz-transform: scale(0.5);
+
+    -ms-transform: scale(0.5);
+
+    -o-transform: scale(0.5);
+
+    transform: scale(0.5);
+
+}
+
+.westbrick-map {
+
+    max-width: 100%;
+
+}
+
+.operations-paragraph-stats-section {    
+
+}
+
+.operations-paragraph-stats-section p {
+
+    
+
+}
+
+/*----------------------------------------------------------------------------------
+
+ 8. service Section css End
+
+----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------
+
+ 9. work process Section css Start
+
+----------------------------------------------------------------------------------*/
+
+
+
 /*==== progress bar css ====*/
+
+.gs_progress_bar{
+
+    float: left;
+
+    width: 100%;
+
+    margin-bottom: 50px;
+
+    position: relative;
+
+}
+
+.gs_progress_bar > ul {
+
+    float: left;
+
+    width: 100%;
+
+    padding: 0;
+
+    margin: 0;
+
+    list-style: none;
+
+}
+
+.gs_progress_bar > ul > li {
+
+    float: left;
+
+    width: 100%;
+
+    margin-bottom: 40px;
+
+}
+
+.progress_header h4 {
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    display: inline-block;
+
+}
+
+.progress_header span {
+
+    font-size: 16px;
+
+    color: rgb(27,27,27);
+
+    float: right;
+
+    margin-top: 8px;
+
+    position: absolute;
+
+    right: 0;
+
+}
+
+.progress_panel {
+
+    width: 100%;
+
+    border: 1px solid rgb(220, 164, 19);
+
+    height: 10px;
+
+    border-radius: 2em;
+
+    position: relative;
+
+}
+
+.progress_panel .progress_slide {
+
+    position: absolute;
+
+    width: 2%;
+
+    height: 100%;
+
+    left: 0;
+
+    top: 0;
+
+    background-color: rgb(220, 164, 19);
+
+    transition: all ease-in 1.5s;
+
+    -webkit-transition: all ease-in 1.5s;
+
+    -moz-transition: all ease-in 1.5s;
+
+}
+
+.progress_slide:after {
+
+    position: absolute;
+
+    content: "";
+
+    height: 10px;
+
+    width: 11px;
+
+    top: 0;
+
+    right: -10px;
+
+    background-color: rgb(220, 164, 19);
+
+    border-radius: 50%;
+
+    margin-top: -1px;
+
+    border-left: 1px solid #fff;
+
+}
+
+/*==== progress bar css ====*/
+
+
 
 .gs_work_section{
+
     padding-top: 80px;
+
     padding-bottom: 100px;
+
     background-color: #F9F9F9;
+
 }
+
 .process_details {
+
     float: left;
+
     width: 100%;
+
     margin-bottom: 50px;
+
 }
+
 .process_details h4 {
+
     font-size: 20px;
+
     line-height: 27px;
+
     margin-top: 0;
+
     margin-bottom: 12px;
+
 }
+
 .process_details p{
+
     line-height: 24px;
+
 }
+
 .process_details .gs_read_m {
+
     margin-top: 10px;
-}
-/*----------------------------------------------------------------------------------
- 9. work process Section css End
-----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------
- 10. Staff Section css Start
-----------------------------------------------------------------------------------*/
-.gs_staff_section{
-    padding-top: 80px;
-    background-color: #F9F9F9;
-}
-.staff_box {
-    float: left;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 70px;
-}
-.staff_thumb{
-    display: inline-block;
-    overflow: hidden;
-    -webkit-filter: grayscale(0);
-    -moz-filter: grayscale(0);
-    -ms-filter: grayscale(0);
-    filter: grayscale(0);
-    box-shadow: 7px 7px 5px rgba(200, 200, 200, 0.5);
-}
-.staff_thumb img {
-    border: black;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5%;
-    height: 145px;
-    width: 104px;
-    /* height: 145px;
-    width: 104px; */
-    /* -webkit-transition: all ease-in 0.3s;
-    -moz-transition: all ease-in 0.3s;
-    -ms-transition: all ease-in 0.3s;
-    -o-transition: all ease-in 0.3s;
-    transition: all ease-in 0.3s;    */
-}
-/* .staff_box:hover .staff_thumb img { 
-    -webkit-filter: grayscale(0);
-    -moz-filter: grayscale(0);
-    -ms-filter: grayscale(0);
-    filter: grayscale(0);    
-    
-} */
-.staff_box h4 {
-    font-size: 18px;
-    margin-top: 20px;
-    text-transform: capitalize;
-}
-.staff_box h5 {
-    display: inline-block;
-    margin-top: 0;
-    border-bottom: 2px solid rgb(220, 164, 19);
-    padding-bottom: 7px;
-    margin-bottom: 15px;
-    text-transform: capitalize;
-}
-.staff_box ul {
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-    overflow: hidden;
-}
-.staff_box ul li {
-    display: inline-block;
-}
-.staff_box ul li a {
-    color: rgb(220, 164, 19);
-    font-size: 16px;
-    padding: 5px;
-    display: block;
-}
-.staff_box ul li a:hover {
-    color: rgb(27,27,27);
-}
-/*----------------------------------------------------------------------------------
- 10. Staff Section css End
-----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------
- 11. Skill Section css Start
-----------------------------------------------------------------------------------*/
-.gs_counter_section {
-    background-color: rgb(220, 164, 19);
-    padding-top: 75px;
-}
-.gs_counter_bar {
-    float: left;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 80px;
-}
-.gs_counter_bar h1 {
-    font-size: 50px;
-    font-weight: 700;
-    color: #ffffff;
-    line-height: 50px;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-.gs_counter_bar h5 {
-    font-size: 18px;
-    font-weight: 400;
-    color: #fff;
-    text-transform: capitalize;
-    margin: 0;
-}
-/*----------------------------------------------------------------------------------
- 11. Skill Section css End
-----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------
- 12. Project Section css Start
-----------------------------------------------------------------------------------*/
-.gs_project_section{
-    padding-top: 80px;
-    padding-bottom: 50px;
-}
-.project_body{
-    float: left;
-    width: 100%;
-    margin-bottom: 30px;
-}
-.project_thumb {
-    position: relative;
-    perspective: 1000px;
-    -moz-perspective: 1000px;
-    -webkit-perspective: 1000px;
-    -o-perspective: 1000px;
-    -ms-perspective: 1000px;
-}
-.project_overlay {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    background-color: rgba(253, 199, 22, 0.85);
-    color: #fff;
-    text-align: center;
-    transform: rotateX(50deg);
-    -webkit-transform: rotateX(50deg);
-    -moz-transform: rotateX(50deg);
-    -ms-transform: rotateX(50deg);
-    -o-transform: rotateX(50deg);
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: all ease-in 0.3s;
-    -moz-transition: all ease-in 0.3s;
-    -ms-transition: all ease-in 0.3s;
-    -o-transition: all ease-in 0.3s;
-    transition: all ease-in 0.3s;
-}
-.project_overlay .overlay_text {
-    width: 100%;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 27px;
-    padding: 0px 10px;
-    text-transform: capitalize;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    -webkit-transform: translateY(0%);
-    -moz-transform: translateY(5%);
-    -ms-transform: translateY(5%);
-    -o-transform: translateY(5%);
-    transform: translateY(5%);
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: all linear 0.3s 0.3s;
-    -moz-transition: all linear 0.3s 0.3s;
-    -ms-transition: all linear 0.3s 0.3s;
-    -o-transition: all linear 0.3s 0.3s;
-    transition: all linear 0.3s 0.3s;
-}
-.view_more_btn{
-    text-align: center;
-}
-.project_thumb:hover .project_overlay{
-    transform: rotateX(0deg);
-    -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-    -ms-transform: rotateX(0deg);
-    -o-transform: rotateX(0deg);
-    opacity: 1;
-    visibility: visible;
-}
-.project_thumb:hover .overlay_text {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
+
 }
 
 /*----------------------------------------------------------------------------------
- 12. Project Section css End
+
+ 9. work process Section css End
+
 ----------------------------------------------------------------------------------*/
+
 /*----------------------------------------------------------------------------------
- 13. Testimonial Section css Start
+
+ 10. Staff Section css Start
+
 ----------------------------------------------------------------------------------*/
-.gs_testimonial_section{
+
+.gs_staff_section{
+
     padding-top: 80px;
-    background-color:#F9F9F9; 
-    padding-bottom: 80px;   
+
+    background-color: #F9F9F9;
+
 }
-.testimonial_carousel{
+
+.staff_box {
+
     float: left;
+
     width: 100%;
+
+    text-align: center;
+
+    margin-bottom: 70px;
+
 }
+
+.staff_thumb{
+
+    display: inline-block;
+
+    overflow: hidden;
+
+    -webkit-filter: grayscale(0);
+
+    -moz-filter: grayscale(0);
+
+    -ms-filter: grayscale(0);
+
+    filter: grayscale(0);
+
+    box-shadow: 7px 7px 5px rgba(200, 200, 200, 0.5);
+
+}
+
+.staff_thumb img {
+
+    border: black;
+
+    border-style: solid;
+
+    border-width: 1px;
+
+    border-radius: 5%;
+
+    height: 145px;
+
+    width: 104px;
+
+    /* height: 145px;
+
+    width: 104px; */
+
+    /* -webkit-transition: all ease-in 0.3s;
+
+    -moz-transition: all ease-in 0.3s;
+
+    -ms-transition: all ease-in 0.3s;
+
+    -o-transition: all ease-in 0.3s;
+
+    transition: all ease-in 0.3s;    */
+
+}
+
+/* .staff_box:hover .staff_thumb img { 
+
+    -webkit-filter: grayscale(0);
+
+    -moz-filter: grayscale(0);
+
+    -ms-filter: grayscale(0);
+
+    filter: grayscale(0);    
+
+    
+
+} */
+
+.staff_box h4 {
+
+    font-size: 18px;
+
+    margin-top: 20px;
+
+    text-transform: capitalize;
+
+}
+
+.staff_box h5 {
+
+    display: inline-block;
+
+    margin-top: 0;
+
+    border-bottom: 2px solid rgb(220, 164, 19);
+
+    padding-bottom: 7px;
+
+    margin-bottom: 15px;
+
+    text-transform: capitalize;
+
+}
+
+.staff_box ul {
+
+    padding-left: 0;
+
+    margin-bottom: 0;
+
+    list-style: none;
+
+    overflow: hidden;
+
+}
+
+.staff_box ul li {
+
+    display: inline-block;
+
+}
+
+.staff_box ul li a {
+
+    color: rgb(220, 164, 19);
+
+    font-size: 16px;
+
+    padding: 5px;
+
+    display: block;
+
+}
+
+.staff_box ul li a:hover {
+
+    color: rgb(27,27,27);
+
+}
+
+/*----------------------------------------------------------------------------------
+
+ 10. Staff Section css End
+
+----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------
+
+ 11. Skill Section css Start
+
+----------------------------------------------------------------------------------*/
+
+.gs_counter_section {
+
+    background-color: rgb(220, 164, 19);
+
+    padding-top: 75px;
+
+}
+
+.gs_counter_bar {
+
+    float: left;
+
+    width: 100%;
+
+    text-align: center;
+
+    margin-bottom: 80px;
+
+}
+
+.gs_counter_bar h1 {
+
+    font-size: 50px;
+
+    font-weight: 700;
+
+    color: #ffffff;
+
+    line-height: 50px;
+
+    margin-top: 0;
+
+    margin-bottom: 15px;
+
+}
+
+.gs_counter_bar h5 {
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    color: #fff;
+
+    text-transform: capitalize;
+
+    margin: 0;
+
+}
+
+/*----------------------------------------------------------------------------------
+
+ 11. Skill Section css End
+
+----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------
+
+ 12. Project Section css Start
+
+----------------------------------------------------------------------------------*/
+
+.gs_project_section{
+
+    padding-top: 80px;
+
+    padding-bottom: 50px;
+
+}
+
+.project_body{
+
+    float: left;
+
+    width: 100%;
+
+    margin-bottom: 30px;
+
+}
+
+.project_thumb {
+
+    position: relative;
+
+    perspective: 1000px;
+
+    -moz-perspective: 1000px;
+
+    -webkit-perspective: 1000px;
+
+    -o-perspective: 1000px;
+
+    -ms-perspective: 1000px;
+
+}
+
+.project_overlay {
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    right: 15px;
+
+    bottom: 15px;
+
+    background-color: rgba(253, 199, 22, 0.85);
+
+    color: #fff;
+
+    text-align: center;
+
+    transform: rotateX(50deg);
+
+    -webkit-transform: rotateX(50deg);
+
+    -moz-transform: rotateX(50deg);
+
+    -ms-transform: rotateX(50deg);
+
+    -o-transform: rotateX(50deg);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    -webkit-transition: all ease-in 0.3s;
+
+    -moz-transition: all ease-in 0.3s;
+
+    -ms-transition: all ease-in 0.3s;
+
+    -o-transition: all ease-in 0.3s;
+
+    transition: all ease-in 0.3s;
+
+}
+
+.project_overlay .overlay_text {
+
+    width: 100%;
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+    line-height: 27px;
+
+    padding: 0px 10px;
+
+    text-transform: capitalize;
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 0;
+
+    -webkit-transform: translateY(0%);
+
+    -moz-transform: translateY(5%);
+
+    -ms-transform: translateY(5%);
+
+    -o-transform: translateY(5%);
+
+    transform: translateY(5%);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    -webkit-transition: all linear 0.3s 0.3s;
+
+    -moz-transition: all linear 0.3s 0.3s;
+
+    -ms-transition: all linear 0.3s 0.3s;
+
+    -o-transition: all linear 0.3s 0.3s;
+
+    transition: all linear 0.3s 0.3s;
+
+}
+
+.view_more_btn{
+
+    text-align: center;
+
+}
+
+.project_thumb:hover .project_overlay{
+
+    transform: rotateX(0deg);
+
+    -webkit-transform: rotateX(0deg);
+
+    -moz-transform: rotateX(0deg);
+
+    -ms-transform: rotateX(0deg);
+
+    -o-transform: rotateX(0deg);
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+.project_thumb:hover .overlay_text {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    -webkit-transform: translateY(-50%);
+
+    -moz-transform: translateY(-50%);
+
+    -ms-transform: translateY(-50%);
+
+    -o-transform: translateY(-50%);
+
+    transform: translateY(-50%);
+
+}
+
+
+
+/*----------------------------------------------------------------------------------
+
+ 12. Project Section css End
+
+----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------
+
+ 13. Testimonial Section css Start
+
+----------------------------------------------------------------------------------*/
+
+.gs_testimonial_section{
+
+    padding-top: 80px;
+
+    background-color:#F9F9F9; 
+
+    padding-bottom: 80px;   
+
+}
+
+.testimonial_carousel{
+
+    float: left;
+
+    width: 100%;
+
+}
+
+
 
 .testimonial_body {
+
     text-align: center;
+
     float: left;
+
     width: 100%;
+
     background-color: #ffffff;
+
     padding-bottom: 40px;
+
 }
+
 .testimonial_body .test_paragraph {
+
     padding: 40px;
+
     background: rgb(220, 164, 19);
+
     color: #fff;
+
     line-height: 24px;
+
     font-size: 16px;
+
     position: relative;
+
     z-index: 1;
+
     backface-visibility: hidden;
+
 }
+
 .testimonial_body .test_paragraph:after {
+
     position: absolute;
+
     content: "";
+
     left: 0;
+
     bottom: -50px;
+
     border-top: 50px solid rgb(220, 164, 19);
+
     z-index: -1;
+
     border-right-style: solid;
+
     border-right-color: transparent;
+
     border-left-style: solid;
+
     border-left-color: transparent;
+
 }
+
 .testimonial_body .test_paragraph p {
+
     margin-bottom: 0;
+
 }
+
 .testimonial_body .client_thumb {
+
     display: table;
+
     border-radius: 50%;
+
     margin: 0px auto 0;
+
     border: 3px solid #fff;
+
     z-index: 1;
+
     position: relative;
+
     backface-visibility: hidden;
+
 }
+
 .testimonial_body .client_thumb img {
+
     border-radius: 100%;
+
 }
+
 .testimonial_body h4 {
+
     font-size: 18px;
+
     font-weight: 600;
+
     margin-top: 20px;
+
 }
+
 .testimonial_body h5 {
+
     font-size: 16px;
+
     margin-bottom: 0;
+
 }
+
 .testimonial_carousel .owl-nav {
+
     text-align: center;
+
     margin-top: 30px;
+
 }
+
 .testimonial_carousel .owl-nav div {
+
     display: inline-block;
+
     width: 30px;
+
     height: 30px;
+
     line-height: 30px;
+
     background-color: rgb(220, 164, 19);
+
     color: #fff;
+
     font-size: 15px;
+
     margin: 0 5px;
+
     -webkit-transition: all ease-in 0.3s;
+
     -moz-transition: all ease-in 0.3s;
+
     -ms-transition: all ease-in 0.3s;
+
     -o-transition: all ease-in 0.3s;
+
     transition: all ease-in 0.3s;
+
 }
+
 .testimonial_carousel .owl-nav div:hover{
+
     background-color: rgb(27,27,27);
+
 }
+
 /*----------------------------------------------------------------------------------
+
  13. Testimonial Section css End
+
 ----------------------------------------------------------------------------------*/
 
+
+
 /*----------------------------------------------------------------------------------
+
  14. Brands Logo Section css End
+
 ----------------------------------------------------------------------------------*/
+
 .gs_logo_section{
+
     background-color: #ffffff;
+
     padding:80px 0; 
+
 }
+
 .logo_carousel{
+
     text-align: center;
+
 }
+
 .logo_carousel .brand_thumb img {
+
     max-width: 100%;
+
     display: inline-block;
+
     transition: all ease-in 0.3s;
+
     -webkit-transition: all ease-in 0.3s;
+
     -moz-transition: all ease-in 0.3s;
+
     -ms-transition: all ease-in 0.3s;
+
     -o-transition: all ease-in 0.3s;
+
     transition: all ease-in 0.3s;
+
     -webkit-filter: grayscale(1); 
+
     -moz-filter: grayscale(1); 
+
     -ms-filter: grayscale(1); 
+
     filter: grayscale(1);
+
 }
+
 .logo_carousel .brand_thumb img:hover {
+
     -webkit-filter: grayscale(0); 
+
     -moz-filter: grayscale(0); 
+
     -ms-filter: grayscale(0);
+
     filter: grayscale(0);
+
 }
+
 /*----------------------------------------------------------------------------------
+
  14. Brands Logo Section css End
+
+----------------------------------------------------------------------------------*/
+
+
+
+/*----------------------------------------------------------------------------------
+
+ 15. About Page css End
+
+----------------------------------------------------------------------------------*/
+
+.gs_page_banner{
+
+    background:#111 url("../images/westbrick/Westbrick_slider01.jpg") no-repeat;
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-size: 100%;
+
+}
+
+.operations-banner{
+
+    background:#111 url("../images/westbrick/beautiful-winter.jpg") no-repeat;
+
+    background-size: 100%;
+
+}
+
+.esg-page-banner{
+
+    background:#111 url("../images/westbrick/under-construction.jpg") no-repeat;    
+
+    background-size: 100%;
+
+}
+
+.community-page-banner {
+
+    background:#111 url("../images/westbrick/community.jpg") no-repeat;
+
+    background-size: 100%;
+
+}
+
+.governance-page-banner {
+
+    background:#111 url("../images/westbrick/governance.jpg") no-repeat;
+
+    background-size: 100%;
+
+}
+
+.investors-page-banner {
+
+    background:#111 url("../images/westbrick/investors.jpg") no-repeat;
+
+    background-size: 100%;
+
+}
+
+.contact-page-banner {
+
+    background:#111 url("../images/westbrick/contact.jpg") no-repeat;
+
+    background-size: 100%;
+
+}
+
+.color_overlay {
+
+    background-color: rgba(0, 0, 0, 0.35);
+
+}
+
+.colour-overlay-operations {
+
+    background-color: rgba(0, 0, 0, 0.35);
+
+}
+
+.colour-overlay-esg {
+
+    background-color: rgba(0, 0, 0, 0.35);
+
+}
+
+.colour-overlay-community {
+
+    background-color: rgba(0, 0, 0, 0.35);
+
+}
+
+.colour-overlay-governance {
+
+    background-color: rgba(0, 0, 0, 0.35);
+
+}
+
+.colour-overlay-investors {
+
+    background-color: rgba(0, 0, 0, 0.35);
+
+}
+
+.colour-overlay-contact {
+
+    background-color: rgba(0, 0, 0, 0.35);
+
+}
+
+.page_banner_heading{
+
+    float: left;
+
+    width: 100%;
+
+    padding: 160px 0 120px;
+
+    text-align: center;
+
+}
+
+.page_banner_heading .page-heading {
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: rgb(220, 164, 19);
+
+    margin-bottom: 15px;
+
+    margin-top: 0;
+
+    line-height: 30px;
+
+    text-transform: capitalize;
+
+}
+
+.page_banner_heading .breadcrumb {
+
+    padding: 0;
+
+    background-color: transparent;
+
+    margin-bottom: 0;
+
+}
+
+.page_banner_heading .breadcrumb li {
+
+    color: rgb(220, 164, 19);
+
+    font-weight: 500;
+
+}
+
+.page_banner_heading .breadcrumb li a{
+
+    color:#ffffff;
+
+    text-decoration: none;
+
+}
+
+.gs_about_services {
+
+    padding-top: 30px;
+
+}
+
+.gs_about_page {
+
+    padding-bottom: 50px;
+
+}
+
+/*----------------------------------------------------------------------------------
+
+ 15. About Page css End
+
 ----------------------------------------------------------------------------------*/
 
 /*----------------------------------------------------------------------------------
- 15. About Page css End
-----------------------------------------------------------------------------------*/
-.gs_page_banner{
-    background:#111 url("../images/westbrick/Westbrick_slider01.jpg") no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-size: 100%;
-}
-.operations-banner{
-    background:#111 url("../images/westbrick/beautiful-winter.jpg") no-repeat;
-    background-size: 100%;
-}
-.esg-page-banner{
-    background:#111 url("../images/westbrick/under-construction.jpg") no-repeat;    
-    background-size: 100%;
-}
-.community-page-banner {
-    background:#111 url("../images/westbrick/community.jpg") no-repeat;
-    background-size: 100%;
-}
-.governance-page-banner {
-    background:#111 url("../images/westbrick/governance.jpg") no-repeat;
-    background-size: 100%;
-}
-.investors-page-banner {
-    background:#111 url("../images/westbrick/investors.jpg") no-repeat;
-    background-size: 100%;
-}
-.contact-page-banner {
-    background:#111 url("../images/westbrick/contact.jpg") no-repeat;
-    background-size: 100%;
-}
-.color_overlay {
-    background-color: rgba(0, 0, 0, 0.35);
-}
-.colour-overlay-operations {
-    background-color: rgba(0, 0, 0, 0.35);
-}
-.colour-overlay-esg {
-    background-color: rgba(0, 0, 0, 0.35);
-}
-.colour-overlay-community {
-    background-color: rgba(0, 0, 0, 0.35);
-}
-.colour-overlay-governance {
-    background-color: rgba(0, 0, 0, 0.35);
-}
-.colour-overlay-investors {
-    background-color: rgba(0, 0, 0, 0.35);
-}
-.colour-overlay-contact {
-    background-color: rgba(0, 0, 0, 0.35);
-}
-.page_banner_heading{
-    float: left;
-    width: 100%;
-    padding: 160px 0 120px;
-    text-align: center;
-}
-.page_banner_heading .page-heading {
-    font-size: 30px;
-    font-weight: 700;
-    color: rgb(220, 164, 19);
-    margin-bottom: 15px;
-    margin-top: 0;
-    line-height: 30px;
-    text-transform: capitalize;
-}
-.page_banner_heading .breadcrumb {
-    padding: 0;
-    background-color: transparent;
-    margin-bottom: 0;
-}
-.page_banner_heading .breadcrumb li {
-    color: rgb(220, 164, 19);
-    font-weight: 500;
-}
-.page_banner_heading .breadcrumb li a{
-    color:#ffffff;
-    text-decoration: none;
-}
-.gs_about_services {
-    padding-top: 30px;
-}
-.gs_about_page {
-    padding-bottom: 50px;
-}
-/*----------------------------------------------------------------------------------
- 15. About Page css End
-----------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------
+
  16. Contact Page css Start
+
 ----------------------------------------------------------------------------------*/
+
 .gs_contact_section{
 
+
+
 }
+
 .ds_contact_form {
+
     float: left;
+
     width: 100%;
+
     background-color: rgb(220, 164, 19);
+
     padding: 50px;
+
 }
+
 .ds_contact_form h2 {
+
     color: #ffffff;
+
     margin-top: 0;
+
     font-size: 30px;
+
     line-height: 30px;
+
     text-transform: capitalize;
+
     text-align: center;
+
     font-weight: 600;
+
     margin-bottom: 22px;
+
 }
+
+
 
 .contact_form_wrap label {
+
     color: #fff;
+
     font-size: 16px;
+
     font-weight: 500;
+
     text-transform: capitalize;
+
     line-height: 17px;
+
     margin-bottom: 8px;
+
     width: 100%;
-}
-.contact_form_wrap fieldset {
-    position: relative;
-    margin-bottom: 25px;
-}
-.contact_form_wrap fieldset span {
-    position: absolute;
-    left: 20px;
-    top: 15px;
-    color: rgb(220, 164, 19);
-    font-size: 16px;
-    line-height: 20px;
-}
-.contact_form_wrap input, 
-.contact_form_wrap textarea {
-    width: 100%;
-    border: none;
-    background-color: #fff;
-    padding-left: 45px;
-}
-.contact_form_wrap input{
-    height: 50px;
-}
-.contact_form_wrap textarea {
-    height: 150px;
-    padding-top: 15px;
-    resize: none;
-}
-.contact_form_wrap .submit_btn {
-    background-color: #fff;
-    border: transparent;
-    height: 50px;
-    line-height: 50px;
-    font-weight: 500;
-    font-size: 16px;
-    color: rgb(220, 164, 19);
-    text-transform: capitalize;
-    padding: 0 36px;
-    cursor: pointer;
-    display: inline-block;
-    text-decoration: none;
-}
-.contact_form_wrap .submit_btn:hover, 
-.contact_form_wrap .submit_btn:focus {
-    color: #ffffff;
-    background-color: rgb(27,27,27);
+
 }
 
-/*==== contact address css ====*/
-.ds_contact_address{
-    float: left;
-    width: 100%;
+.contact_form_wrap fieldset {
+
+    position: relative;
+
+    margin-bottom: 25px;
+
 }
-.ds_contact_address h2 {
-    color: rgb(27,27,27);
-    font-size: 30px;
-    font-weight: 500;
-    text-transform: capitalize;
-    margin-bottom: 30px;
-    margin-top: 0;
-}
-.ds_contact_address h2 span {
+
+.contact_form_wrap fieldset span {
+
+    position: absolute;
+
+    left: 20px;
+
+    top: 15px;
+
     color: rgb(220, 164, 19);
+
+    font-size: 16px;
+
+    line-height: 20px;
+
 }
+
+.contact_form_wrap input, 
+
+.contact_form_wrap textarea {
+
+    width: 100%;
+
+    border: none;
+
+    background-color: #fff;
+
+    padding-left: 45px;
+
+}
+
+.contact_form_wrap input{
+
+    height: 50px;
+
+}
+
+.contact_form_wrap textarea {
+
+    height: 150px;
+
+    padding-top: 15px;
+
+    resize: none;
+
+}
+
+.contact_form_wrap .submit_btn {
+
+    background-color: #fff;
+
+    border: transparent;
+
+    height: 50px;
+
+    line-height: 50px;
+
+    font-weight: 500;
+
+    font-size: 16px;
+
+    color: rgb(220, 164, 19);
+
+    text-transform: capitalize;
+
+    padding: 0 36px;
+
+    cursor: pointer;
+
+    display: inline-block;
+
+    text-decoration: none;
+
+}
+
+.contact_form_wrap .submit_btn:hover, 
+
+.contact_form_wrap .submit_btn:focus {
+
+    color: #ffffff;
+
+    background-color: rgb(27,27,27);
+
+}
+
+
+
+/*==== contact address css ====*/
+
+.ds_contact_address{
+
+    float: left;
+
+    width: 100%;
+
+}
+
+.ds_contact_address h2 {
+
+    color: rgb(27,27,27);
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+    text-transform: capitalize;
+
+    margin-bottom: 30px;
+
+    margin-top: 0;
+
+}
+
+.ds_contact_address h2 span {
+
+    color: rgb(220, 164, 19);
+
+}
+
+
 
 .ds_contact_address ul li {
+
     float: left;
+
     width: 100%;
+
     margin-bottom: 30px;
+
     padding-right: 0;
+
 }
+
+
 
 .ds_contact_address ul li .con_icons i {
+
     font-size: 25px;
+
     height: 50px;
+
     line-height: 50px;
+
     width: 50px;
+
 }
+
 .ds_contact_address ul li .con_details {
+
     padding-left: 30px;
+
 }
+
 /*==== contact address css ====*/
+
 /*==== contact map css ====*/
+
 .gs_contact_map {
+
     float: left;
+
     width: 100%;
+
     border-top: 1px solid rgb(220, 164, 19);
+
     padding-top: 30px;
+
 }
+
 #contact_map {
+
     width: 100%;
+
     height: 430px;
+
 }
+
 /*==== contact map css ====*/
+
 /*----------------------------------------------------------------------------------
+
  16. Contact Page css End
+
 ----------------------------------------------------------------------------------*/
+
+
+
+
 
 
 
 /*----------------------------------------------------------------------------------
+
  20. footer Section css Start
+
 ----------------------------------------------------------------------------------*/
+
 .gs_footer_section {
+
     background-color: rgb(255,255,255);
+
     padding-top: 20px;
+
 }
+
 .gs_footer_section .widget {
+
     float: left;
+
     width: 100%;
+
     margin-bottom: 10px;
+
 }
+
 .gs_footer_section .widget .widget-title{
+
     color: #171717;
+
     font-size: 20px;
+
     font-weight: 600;
+
     margin-top: 0;    
+
     padding-bottom: 20px;
+
     position: relative;
+
     text-transform: capitalize;
+
     margin-bottom: 0px;
+
     text-decoration-thickness: 3px;
+
     text-decoration-line: underline;
+
     text-decoration-color: rgba(220, 164, 19, 1);
+
     
+
 }
+
 .gs_footer_section .widget .widget-title:after{
+
     position: absolute;
+
     content: "";
+
     left: 0;
+
     bottom: 0;
+
     width: 50px;
+
     height: 2px;
+
     background-color: rgba(220, 164, 19, 0);
+
 }
+
 .gs_footer_section .widget p {
+
     color: #171717;
+
     line-height: 24px;
+
 }
+
 .gs_footer_section .widget ul {
+
     padding-left: 0;
+
     list-style: none;
+
     margin: 0;
+
 }
+
 .widget_address ul li {
+
     color: #171717;
+
     line-height: 28px;
+
     margin-bottom: 12px;
+
 }
+
 .widget_address ul li i {
+
     color: rgb(220, 164, 19);
+
     font-size: 16px;
+
     padding-right: 10px;
+
 }
+
+
 
 .widget_newsletter form input {
+
     width: 100%;
+
     margin-bottom: 20px;
+
     height: 50px;
+
     border: none;
+
     padding: 0px 15px;
+
 }
+
 .widget_newsletter form .news_btn {
+
     height: 50px;
+
     line-height: 50px;
+
     padding: 0 38px;
+
     margin-top: 10px;
+
 }
+
 /*===== copyright footer css start =====*/
+
 .gs_footer_bottom {
+
     background: rgb(17, 17, 17);
+
     text-align: center;
+
     padding: 25px 0px;
+
 }
+
 .copyright_text {
+
     padding: 0 15px;
+
 }
+
 .copyright_text p {
+
     margin-bottom: 0;
+
     color: #ffffff;
+
     font-size: 16px;
+
     font-weight: 500;
+
 }
+
 .copyright_text p a{
+
     color: #ffffff;
+
     text-decoration:none;
+
 }
+
 .copyright_text p a:hover{
+
     color:rgb(27,27,27);
+
 }
+
 /*===== copyright footer css start =====*/
+
 /*----------------------------------------------------------------------------------
+
  20. footer Section css End
+
 ----------------------------------------------------------------------------------*/
+
 /* Sponsor Section */
+
 .sponsor-image {
+
     display: block;
+
     margin: 0 auto;
+
 }
+
+
 
 .community-support-image{
+
     display: block;
+
     margin: 10px auto;
+
     margin-top: 0px;
+
     border-radius: 8px;
+
     border: rgb(220,164,19);
+
     border-style: solid;
+
     width: 90%;
+
     box-shadow: 7px 7px 5px rgba(200, 200, 200, 0.5);
-}
-.community-support-image-text {
-    margin: 0px 20px 20px;
-    text-align: center;
-}
-p {
-    /* text-indent: 8px; */
-}
-.add-padding {
-    padding: 10px;
-}
-.contact-image {
-    display: block;
-    margin: 10px auto;
-    border-radius: 8px;
-    border: rgb(27,27,27);
-    border-width: 2px;
-    border-style: solid;
-    width: 90%;
-    box-shadow: 7px 7px 5px rgba(200, 200, 200, 0.5);
-}
-.contact-downtown {
-    text-align: center;
-    font-size: 20px;
-}
-.contact-downtown p{
-    margin-bottom: 0;
-}
-.contact-list-main {
-    text-align: center;
-    padding-top: 40px;        
-}
-.contact-list-main-left {
-    text-align: right;
-    text-wrap: nowrap;
-    margin-bottom: 50px;
-}
-.contact-list-main-right {
-    text-align: left;
-    margin-bottom: 50px;
-}
-.estma-pdf {
-    text-align: center;
-    font-size: 18px;
-    padding-top: 80px;
-}
-.financial-reporting{
-    font-size: 18px;
-    padding-left: 80px;
-    padding-right: 80px;
-}
-.financial-reporting bold{
-    font-weight: bold;
+
 }
 
-.margin-bottom-padding {
-    margin-bottom: 50px;
+.community-support-image-text {
+
+    margin: 0px 20px 20px;
+
+    text-align: center;
+
 }
-.margin-top-padding {
-    margin-top: 50px;
+
+p {
+
+    /* text-indent: 8px; */
+
 }
-.whistleblower-image {
+
+.add-padding {
+
+    padding: 10px;
+
+}
+
+.contact-image {
+
     display: block;
-    max-width: 100%;
-    max-width: 310px;
+
     margin: 10px auto;
+
     border-radius: 8px;
+
     border: rgb(27,27,27);
-    border-style: solid;  
-    box-shadow: 7px 7px 5px rgba(200, 200, 200, 0.5); 
+
+    border-width: 2px;
+
+    border-style: solid;
+
+    width: 90%;
+
+    box-shadow: 7px 7px 5px rgba(200, 200, 200, 0.5);
+
 }
-/* Dropdown */
-.dropdown-content {
-    display: none;
-    position: absolute; 
-    z-index: 1;
+
+.contact-downtown {
+
+    text-align: center;
+
+    font-size: 20px;
+
 }
-.dropdown-content a {
-    color: whitesmoke;
-    padding: 12px 16px;
-    text-decoration: none;
+
+.contact-downtown p{
+
+    margin-bottom: 0;
+
+}
+
+.contact-list-main {
+
+    text-align: center;
+
+    padding-top: 40px;        
+
+}
+
+.contact-list-main-left {
+
+    text-align: right;
+
+    text-wrap: nowrap;
+
+    margin-bottom: 50px;
+
+}
+
+.contact-list-main-right {
+
+    text-align: left;
+
+    margin-bottom: 50px;
+
+}
+
+.estma-pdf {
+
+    text-align: center;
+
+    font-size: 18px;
+
+    padding-top: 80px;
+
+}
+
+.financial-reporting{
+
+    font-size: 18px;
+
+    padding-left: 80px;
+
+    padding-right: 80px;
+
+}
+
+.financial-reporting bold{
+
+    font-weight: bold;
+
+}
+
+
+
+.margin-bottom-padding {
+
+    margin-bottom: 50px;
+
+}
+
+.margin-top-padding {
+
+    margin-top: 50px;
+
+}
+
+.whistleblower-image {
+
     display: block;
-    background-color: rgb(27,27,27);
+
+    max-width: 100%;
+
+    max-width: 310px;
+
+    margin: 10px auto;
+
+    border-radius: 8px;
+
+    border: rgb(27,27,27);
+
+    border-style: solid;  
+
+    box-shadow: 7px 7px 5px rgba(200, 200, 200, 0.5); 
+
 }
+
+/* Dropdown */
+
+.dropdown-content {
+
+    display: none;
+
+    position: absolute; 
+
+    z-index: 1;
+
+}
+
+.dropdown-content a {
+
+    color: whitesmoke;
+
+    padding: 12px 16px;
+
+    text-decoration: none;
+
+    display: block;
+
+    background-color: rgb(27,27,27);
+
+}
+
 .dropdown-content a:hover {}
+
+
 
 .dropdown:hover .dropdown-content {display: block;}
 
+
+
 /* new stuff */
 
+
+
 .westbrick-logo {
+
     width: 200px;
+
 }
+
+
 
 .emergency-contact {
+
     color: red !important;
+
 }
+
 .founding-ww-title {
+
     text-align: center;
+
     font-weight: bold;
+
     color: rgb( 27, 27, 27);
+
     margin-bottom: 60px;
+
 }
+
 .founding-ww-title span {
+
     color:rgb( 220, 164, 19);
+
 }
+
 .our-founding-principles {
+
     font-size: 18px;
+
     font-family: Arial, Helvetica, sans-serif;
+
     color: black;
+
 }
+
+
 
 .our-founding-principles li::marker {
+
     color: rgb(220, 164, 19);
+
 }
+
 .our-founding-principles {
 
+
+
 }
+
 .the-westbrick-way-image {
+
     align-items: center;
+
     margin: 0 auto;
+
     display: block;
+
     width: 500px;  
+
 }
+
 .gs_profitable_business_section {
+
     padding-top: 30px;
+
     padding-bottom: 90px; 
+
 }
+
 .profitable-business-row-2 {
+
     font-size: 16px;
+
 }
+
 .profitable-business-row-1 {
+
     text-align: left;
+
     margin-top: 20px;
+
 }
+
 .profitable-business-map {
+
     width: 400px;
+
 }
+
 .profitable-points {
+
     font-size: 20px;
+
     margin-top: 50px;
+
 }
+
 .profitable-stats {
+
     margin-left: 70px;
+
 }
+
 .profitable-stats h3 {
+
     color: rgb( 220, 164, 19);
+
     font-size: 20px;
+
     margin: 5px 0 5px 0;
+
 }
+
 .profitable-stats h4 {
+
     color: rgb( 27, 27, 27);
+
     font-size: 16px;   
+
     margin: 0; 
+
 }
+
 .profit-bold {
+
     font-weight: bold;
+
     color:rgb( 27, 27, 27);
+
     list-style-type: none;
+
 }
+
 .profit-bold::marker {
+
     color: rgb( 220, 164, 19);
+
 }
+
 .profit-nested {
+
     font-weight: normal;
+
     color:rgb( 27, 27, 27);   
+
     list-style-type: disc; 
+
 }
+
 .profit-nested::marker {
+
     color: rgb( 220, 164, 19);    
+
 }
+
 .profitable-business-title {
+
     margin-top: 0;
+
     font-size: 50px;
+
     /* text-decoration: underline;
+
     text-decoration-color:rgb( 220, 164, 19);
+
     text-decoration-thickness: 4px; */
+
 }
+
 .profitable-business-pre-header {
+
     font-size: 22px;
+
     color: #919191;
+
 }
+
 .profitable-business-underline {
+
     margin-bottom: 10px;
+
 }
+
 .profitable-business-footnotes {
+
     color: #919191;
+
     margin-bottom: 50px;
+
 }
+
 .significant-delineations-full-title {
+
     margin: 40px 120px 30px 120px;
+
 }
+
 .significant-delineations-pre-title {
+
     margin: 0;
+
     font-size: 22px;
+
     margin-bottom: 15px;
+
 }
+
 .significant-delineations-main-title {
+
     margin: 5px;
+
     margin-top: 10px;
+
     font-size: 50px;
+
     /* text-decoration: underline;
+
     text-decoration-color:rgb( 220, 164, 19);
+
     text-decoration-thickness: 5px; */
+
 }
+
 .geological-advantages-title {
+
     color: rgb(220, 164, 19);
+
     font-weight: bold;
+
     text-decoration: underline;
+
     margin-bottom: 20px;
+
     margin-top: 10px;
+
 }
+
 .geological-advantages-checklist {
+
     color: rgb(27,27,27);
+
     font-size: 22px;
+
 }
+
 .geological-advantages {
+
     font-size: 18px;
+
     padding: 10px;
+
     border-style: solid;
+
     margin-right: 20px;    
+
     margin-left: 100px;    
+
     color: rgb(220, 164, 19);
+
     list-style-image: url(../images/westbrick/checkmark-circle-yellow-small.svg);    
+
     height: 500px;
+
     width: 450px;
+
     max-width: 90%;
+
 }
+
 .geographical-advantages-title {
+
     color: rgb(27,27,27);
+
     font-weight: bold;
+
     text-decoration: underline; 
+
     margin-bottom: 20px; 
+
     margin-top: 10px;  
+
 }
+
 .significant-delineations-title {
+
     font-size: 20px;
+
     margin: 0 0 0 0;
+
     margin-left: 30px;
+
 }
+
 .significant-delineations-map {    
+
     margin: 0 auto;
+
     display: block;
+
     max-width: 100%;
+
     margin-left: 0px;
+
     width: 30vw;   
+
 }
+
 .significant-delineations{
 
+
+
 }
+
 .geographical-advantages-checklist {
+
     font-size: 22px;
+
 }
+
 .geographical-advantages {
+
     font-size: 18px;
+
     padding: 10px;
+
     border-style: solid;
+
     margin-left: 20px;    
+
     margin-right: 100px;    
+
     color: rgb(27, 27, 27);
+
     list-style-image: url(../images/westbrick/checkmark-circle-black-small.svg);
+
     height: 500px;
+
     width: 450px;
+
     max-width: 90%;
+
 }
+
 .significant-delineations-footer {
+
     text-align: center;
+
     margin-bottom: 60px;
+
     margin-top: 10px;
+
     font-size: 25px;
+
 }
+
 .divider {
+
     display: block;
+
     margin: 0 auto;
+
 }
+
 .our-founding-principles-whole {
+
     margin-top: 60px;
+
 }
+
 .gs_operating_philosophy_section {
+
     background-color: #F9F9F9;
+
     padding-bottom: 60px;
+
 }
+
 .operating-philosophy-pre-title {
+
     font-size: 20px;
+
     margin: 0;
+
     color:#919191;
+
 }
+
 .operating-philosophy-title {
+
     /* text-decoration: underline;
+
     text-decoration-color:rgb( 220, 164, 19);
+
     text-decoration-thickness: 5px; */
+
     font-size: 45px;
+
     margin: 10px 0 0 0;
+
 }
+
 .operating-philosophy-underline {
+
     margin: 10px 0 15px 0;
+
 }
+
 .operating-philosophy-row {
+
     margin: 60px;
+
 }
+
 .operating-philosophy-graph {
+
     width: 800px;
+
 }
+
 .operating-philosophy-list {
+
     font-size: 20px;
+
 }
+
 .operating-philosophy-full-left {
 
+
+
 }
+
 .esg-box {
+
     border: rgb( 220, 164, 19);
+
     border-style: solid; 
+
     margin: 20px;   
+
     font-size: 16px;
+
     padding-right: 20px;
+
     padding-bottom: 10px;
+
 }
+
 .esg-box-title {
+
     color: rgb( 220, 164, 19);
+
     text-align: center;
+
 }
+
 .esg-titles {
+
     margin: 40px 0 0 40px;
+
 }
+
 .esg-title {
+
     margin: 0;
+
     font-size: 40px;
+
     margin-bottom: 0;
+
     /* text-decoration: underline;
+
     text-decoration-color:rgb( 220, 164, 19); */
+
 }
+
 .esg-title-pending-review {
+
     
+
     font-size: 40px;
+
     
+
     margin-bottom: 0;
+
 }
+
 .esg-underline-pending-review {        
+
     
+
 }
+
 .esg-pending-review {
+
     margin-top: 80px; 
+
 }
+
 .esg-pending-review p {
+
     font-size: 18px;
+
 }
+
 .esg-pre-title {
+
     margin: 0;
+
     color: #919191;
+
     margin-bottom: 15px;
+
     font-size: 22px;
+
 }
+
 .esg-underline {
+
     margin-top: 10px;
+
 }
+
 .alberta-words-image {    
+
     width: 400px;
+
 }
+
 .members-impact-picture {
+
     width: 250px;
+
     border-radius: 8px;
+
     border: rgb(220,164,19);
+
     border-style: solid;
+
     box-shadow: 7px 7px 5px rgba(200, 200, 200, 0.5);
+
 }
+
 .gs_operations_section {
+
     padding-top: 60px;
+
 }
+
 .governance-policy {
+
     margin: 20px;
+
 }
+
 .profitable-business-footnotes {
+
     
+
 }
+
 .westbrick-derrick-sunrise {
+
     display: block;
+
     margin: 40px auto 50px auto;
+
     border-radius: 8px;
+
     border: rgb(220,164,19);
+
     border-style: solid;  
+
     box-shadow: 7px 7px 5px rgba(200, 200, 200, 0.5); 
+
 }
+
 .private-oil-and-gas {
+
     font-size: 18px;
+
     margin-bottom: 30px;    
+
 }
+
 .private-oil-and-gas h4 {
+
     font-weight: bold;
+
     font-size: 22px;
+
     text-decoration: underline;
+
     text-decoration-color: rgb(220, 164, 19);
+
 }
+
 .minimizing-environmental-impact-bottom {
+
     font-size: 18px;
+
     margin-bottom: 30px;
+
     margin-top: 30px;    
+
 }
+
 .minimizing-environmental-impact-bottom h4{
+
     font-weight: bold;
+
     font-size: 22px;
+
     text-decoration: underline;
+
     text-decoration-color: rgb(220, 164, 19);
+
     
+
 }
+
 .minimizing-environmental-impact-bottom-image {
+
     display: block;
+
     margin: 80px auto 50px auto;    
+
     border-radius: 8px;
+
     border: rgb(220,164,19);
+
     border-style: solid;       
+
     box-shadow: 7px 7px 5px rgba(200, 200, 200, 0.5);
+
 }
+
 .members-of-the-community-bottom {
+
     font-size: 18px;
+
     margin-bottom: 50px;
+
     margin-top: 50px;        
+
 }
+
 .members-of-the-community-bottom h4 {
+
     font-weight: bold;
+
     font-size: 22px;
+
     text-decoration: underline;
+
     text-decoration-color: rgb(220, 164, 19);
+
 }
+
 .members-of-the-community-bottom-image {
+
     display: block;
+
     margin: 30px auto;
+
     border-radius: 8px;
+
     border: rgb(220,164,19);
+
     border-style: solid;    
+
     box-shadow: 7px 7px 5px rgba(200, 200, 200, 0.5);
+
 }
+
 .about-caption {
+
     font-size: 16px;
+
     text-align: center;
+
     line-height: 23px;
+
 }
+
 .emergency-phone-number-footer {
+
     font-size: 20px;
+
     color: red !important;
+
     font-weight: bolder;  
+
         
+
 }
+
 .emergency-phone-number-footer a {
+
     color: red;
+
 }
+
 .emergency-contact-footer {
+
     margin-top: 30%;
+
 }
+
 .operations-paragraphs {
+
     font-size: 18px;
+
 }
+
 .track-record-graph {
+
     width: 34vw;
+
     display: block;    
+
 }
+
 .track-record-full-title {
+
     
+
 }
+
 .track-record-pre-title {
+
     color: #919191;
+
     font-size: 20px;
+
 }
+
 .track-record-title {
+
     font-size: 36px;
+
 }
+
 .track-record-section {
+
     margin: 50px 200px 50px 200px;
+
     padding-top: 40px;
+
 }
+
 .track-record-notes {
+
     color: #919191;
+
     /* line-height: 0px; */
+
     margin-top: 10px;
+
 }
+
 .track-record-notes p {
+
     margin: 0;
+
 }
+
 #ownershipChart {
+
     width: 450px;
+
 }
+
 #productionChart {
+
     width: 450px;
+
 }
+
 #locationsChart {
+
     width: 450px;
+
 }
+
 .westbrick-footer-logo {
+
     width: 430px;    
+
     padding: 10px;
+
 }
+
 .environment-esg {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     padding-left: 20px;
+
 }
+
 .environment-svg{       
+
     width: 120px;
+
     margin-top: 10px;
+
 }
+
   
+
 .environment-text{
+
     flex-basis: 100%;
+
 }
+
 .safety-esg {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     padding-left: 20px;
+
 }
+
 .safety-svg{       
+
     width: 120px;
+
     margin-top: 10px;
+
 }  
+
 .safety-text{
+
     flex-basis: 100%;
+
 }
+
 .community-esg {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     padding-left: 20px;
+
 }
+
 .community-svg{       
+
     width: 120px;
+
     margin-top: 10px;
+
 }  
+
 .community-text{
+
     flex-basis: 100%;
+
 }
+
 .governance-esg {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     padding-left: 20px;
+
 }
+
 .governance-svg{       
+
     width: 120px;
+
     margin-top: 10px;
+
 }  
+
 .governance-text{
+
     flex-basis: 100%;
+
 }
+
 .experienced-team-pre-header {
+
     color: #919191;
+
     font-size: 24px;
+
 }
+
 .experienced-team-title {
+
     font-size: 47px;
+
 }
+
 .experienced-team-underline {
+
     margin-bottom: 50px;
+
     margin-top: 10px;
+
 }
+
 .background-watermark {
+
     background-image: url(../images/westbrick/WESTBRICK-wide-transparent.svg);    	
+
 	background-size: 100%;
+
 	background-repeat: no-repeat;		
+
 	background-position: center;	
+
 	background-attachment: fixed;
+
 }
+
 .gs_responsibility_section {
+
     padding-top: 0px;
+
     padding-bottom: 50px;
+
 }
+
 .video-hero-section {
+
     height: 400px; 
+
 }
+
 #oil-and-gas-video {        
+
     object-fit: cover;
+
     height: 100%;
+
     width: 100%;
+
 }
+
 .management-team-svg{
+
     width: 900px;
+
     display: block;
+
     margin: 40px auto;
+
     max-width: 80vw;
+
     margin-bottom: 140px;
+
 }
+
 .significant-delineations-section {
+
     padding-top: 50px;
+
     padding-bottom: 100px;
+
 }
+
 .operating-philosophy-section {
+
     padding-top: 100px;
+
     padding-bottom: 100px;
+
 }
+
 .operations-section {
+
     padding-top: 150px;
+
     padding-bottom: 150px;
+
     background-color: #F9F9F9;
+
 }
+
 .profit-graph {
+
     height: 300px;
+
     display: block;
+
     margin: 0 auto;
+
 }
+
 .profit-ownership-graph {
+
     height: 305px;
+
 }
+
 .profit-production-capability-graph {
+
     height: 295px;
+
 }
+
 .profit-net-locations-graph {
 
+
+
 }
+
 .culture-section {
+
     padding-bottom: 80px;
+
 }
+
 .esg-section {
+
     padding-top: 40px;
+
     padding-bottom: 80px;
+
 }
+
 .gs_footer_section {
+
     
+
 }
+
 .contact-us-footer {
+
     color: #171717;
+
 }
+
 .click-to-download-esg-pdf {
+
     background-color: rgb( 220, 164, 19);   
+
     margin-top: 50px; 
+
 }
+
 .esg-pdf-link {
+
     color: #fff;    
+
 }
+
 .esg-pdf-link:hover {
+
     color: #171717;
+
 }
+
 .yellow-bar-section {
+
     background-color: rgb( 220, 164, 19);  
+
     padding: 40px;  
+
 }
+
 .yellow-bar-esg-section {
 
+
+
     background-color: rgb( 220, 164, 19);  
+
     padding: 40px;  
+
     text-align: center;
+
     font-weight: bold;
+
     font-family: Arial, Helvetica, sans-serif;
-}
-.supporting-community-banner {
-    text-align: center;
-    font-weight: bold;
-    color: #ffffff;
-    font-size: 70px;
-}
-.whistleblower-section {
-    padding-top: 50px;
-}
-.community-support-section {
-    font-size: 18px;
-    padding-bottom: 50px;
-    color: black;
-}
-.community-support-section li {
-    margin-top: 6px;
-    font-size: 14px;
-}
-.community-support-section ul {
-    font-size: 16px;
-    padding-left: 0px;
-}
-.community-words-section {
-    background-color: rgba(200, 200, 200, 0.3);
-    border-radius: 10px;
-    padding: 20px; 
-    padding-left: 40px;   
-    border-style: solid;
-    border-color: rgb( 220, 164, 19);
-}
-/* REMEMBER TO COPY THIS OVER TO CURRENT */
-.article {
-    margin-bottom: 100px;
-    background-color: rgba(200, 200, 200, 0.3);
-    border-radius: 10px;
-    padding: 20px; 
-    padding-left: 60px;   
-    padding-right: 60px;
-    border-style: solid;
-    border-color: rgb( 220, 164, 19);
-    font-family: Arial, Helvetica, sans-serif;
-}
-.articles-title {
-    margin-top: 30px;    
-}
-.article-author {
-    font-style: italic;
-    font-size: 24px;
-}
-.article-paragraph {
-    font-size: 24px;
-    text-indent: 40px;
-}
-.article-title {
-    font-weight: bold;
-    text-decoration: underline;
-    text-decoration-color: rgb( 220, 164, 19);
-}
-.submission-form {
-    display: block;
-    margin: 10px auto;
-    margin-bottom: 100px;
-    background-color: rgba(200, 200, 200, 0.3);
-    border-radius: 10px;      
-    border-style: solid;
-    border-color: rgb( 220, 164, 19);
-    padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
-}
-.submission-form label{
-    display: block;
-    font-size: 24px;
-    margin: 10px auto;
-    text-align: center;  
-    margin-top: 20px;  
-}
-.submission-form input{
-    display: block;
-    margin: 10px auto;
-    height: 50px;
-    background-color: rgba(255, 255, 255, 0.60);
-    padding: 5px;
-    border-radius: 10px;      
-    border-style: solid;
-    border-color: rgb( 220, 164, 19);
-    border-width: 3px;
-}
-.date-box{
-    width: 300px;
-    padding: 5px;
-    text-align: center;
-}
-.submission-form textarea{
-    display: block;
-    margin: 10px auto;
-    width: 80%;
-    height: 500px;
-    padding: 20px;
-    border-radius: 10px;      
-    border-style: solid;
-    border-color: rgb( 220, 164, 19);
-    border-width: 4px;
-    background-color: rgba(255, 255, 255, 0.60);
-}
-.submit-button{
-    display: block;
-    margin: 30px auto 30px auto;    
-    width: 300px;
-    height: 70px;    
-    border-radius: 5px;
-    font-weight: bold;
-    text-align: center;    
-    margin-top: 50px !important;
-}
-.choose-file-input-box {
-    width: 760px;
-    max-width: 90%;
-}
-.submit-button:hover {
-    background-color: rgba(253, 199, 22, 0.85);
-}
-.upload-image-button:hover {
-    background-color: rgba(253, 199, 22, 0.85);
-}
-.article-image {
-    max-width: 100%;
-    height: auto;
-    max-width: 400px;
-    max-height: 400px;
-    border-radius: 10px;      
-    border-style: solid;
-    border-color: rgb(27,27,27);
-    border-width: 2px;
-    padding: 13px;
-    margin-left: 40px;
-}
-.estma-section {    
-    padding: 150px auto;
-    
 
 }
-.call-us-top {
-    /* margin-right: 20px; */
+
+.supporting-community-banner {
+
+    text-align: center;
+
+    font-weight: bold;
+
+    color: #ffffff;
+
+    font-size: 70px;
+
 }
+
+.whistleblower-section {
+
+    padding-top: 50px;
+
+}
+
+.community-support-section {
+
+    font-size: 18px;
+
+    padding-bottom: 50px;
+
+    color: black;
+
+}
+
+.community-support-section li {
+
+    margin-top: 6px;
+
+    font-size: 14px;
+
+}
+
+.community-support-section ul {
+
+    font-size: 16px;
+
+    padding-left: 0px;
+
+}
+
+.community-words-section {
+
+    background-color: rgba(200, 200, 200, 0.3);
+
+    border-radius: 10px;
+
+    padding: 20px; 
+
+    padding-left: 40px;   
+
+    border-style: solid;
+
+    border-color: rgb( 220, 164, 19);
+
+}
+
+/* REMEMBER TO COPY THIS OVER TO CURRENT */
+
+.article {
+
+    margin-bottom: 100px;
+
+    background-color: rgba(200, 200, 200, 0.3);
+
+    border-radius: 10px;
+
+    padding: 20px; 
+
+    padding-left: 60px;   
+
+    padding-right: 60px;
+
+    border-style: solid;
+
+    border-color: rgb( 220, 164, 19);
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.articles-title {
+
+    margin-top: 30px;    
+
+}
+
+.article-author {
+
+    font-style: italic;
+
+    font-size: 24px;
+
+}
+
+.article-paragraph {
+
+    font-size: 24px;
+
+    text-indent: 40px;
+
+}
+
+.article-title {
+
+    font-weight: bold;
+
+    text-decoration: underline;
+
+    text-decoration-color: rgb( 220, 164, 19);
+
+}
+
+.submission-form {
+
+    display: block;
+
+    margin: 10px auto;
+
+    margin-bottom: 100px;
+
+    background-color: rgba(200, 200, 200, 0.3);
+
+    border-radius: 10px;      
+
+    border-style: solid;
+
+    border-color: rgb( 220, 164, 19);
+
+    padding: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 24px;
+
+}
+
+.submission-form label{
+
+    display: block;
+
+    font-size: 24px;
+
+    margin: 10px auto;
+
+    text-align: center;  
+
+    margin-top: 20px;  
+
+}
+
+.submission-form input{
+
+    display: block;
+
+    margin: 10px auto;
+
+    height: 50px;
+
+    background-color: rgba(255, 255, 255, 0.60);
+
+    padding: 5px;
+
+    border-radius: 10px;      
+
+    border-style: solid;
+
+    border-color: rgb( 220, 164, 19);
+
+    border-width: 3px;
+
+}
+
+.date-box{
+
+    width: 300px;
+
+    padding: 5px;
+
+    text-align: center;
+
+}
+
+.submission-form textarea{
+
+    display: block;
+
+    margin: 10px auto;
+
+    width: 80%;
+
+    height: 500px;
+
+    padding: 20px;
+
+    border-radius: 10px;      
+
+    border-style: solid;
+
+    border-color: rgb( 220, 164, 19);
+
+    border-width: 4px;
+
+    background-color: rgba(255, 255, 255, 0.60);
+
+}
+
+.submit-button{
+
+    display: block;
+
+    margin: 30px auto 30px auto;    
+
+    width: 300px;
+
+    height: 70px;    
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    text-align: center;    
+
+    margin-top: 50px !important;
+
+}
+
+.choose-file-input-box {
+
+    width: 760px;
+
+    max-width: 90%;
+
+}
+
+.submit-button:hover {
+
+    background-color: rgba(253, 199, 22, 0.85);
+
+}
+
+.upload-image-button:hover {
+
+    background-color: rgba(253, 199, 22, 0.85);
+
+}
+
+.article-image {
+
+    max-width: 100%;
+
+    height: auto;
+
+    max-width: 400px;
+
+    max-height: 400px;
+
+    border-radius: 10px;      
+
+    border-style: solid;
+
+    border-color: rgb(27,27,27);
+
+    border-width: 2px;
+
+    padding: 13px;
+
+    margin-left: 40px;
+
+}
+
+.estma-section {    
+
+    padding: 150px auto;
+
+    
+
+
+
+}
+
+.call-us-top {
+
+    /* margin-right: 20px; */
+
+}
+
 .e-mail-us-top {
 
+
+
 }
+
 .meet-us-top {
 
+
+
 }
+
 .meet-us-top-section {
+
     width: 29% !important;
+
 }
+
 .staff-name {
+
     font-size: 22px !important;
+
     font-weight: bold;
+
 }
+
 .background-grey-section {    
+
     
+
 }
+
 .staff-member {
+
     padding-top: 60px;     
+
     padding-bottom: 10px;
+
     border-radius: 15px;
+
     margin: 10px;
+
     padding-right: 10px;
+
 }
+
 .staff-member:nth-child(2n) {
+
     /* background-color: rgba(250, 250, 250, 0.3);  */
+
 } 
+
 .staff-member:nth-child(2n+1) {
+
     background-color: rgba(255, 255, 255, 0.50); 
+
 }
+
 .about-caption {
 
+
+
 }
+
 .community-support-title {
+
     padding-top: 40px;
+
 }
+
 .contact-section {
+
     padding-top: 40px;
+
 }
+
 .founding-principle-list li {
+
     margin-left: -22px;
+
 }
+
 .footer-address p {
+
     margin-bottom: 0;
+
 }
+
 .profit-bold {
+
     
+
 }
+
 .profit-bold::marker{
+
     
+
 }
+
 .profitable-business-body-chunk ul{
+
     
+
 }
+
 .profitable-business-body-chunk li{
+
     
+
 }
+
 .profitable-business-body-chunk1{
+
     padding: 0;
+
 }
+
 .westbrick-is {
+
     width: 500px;
+
     height: 280px;
+
     display: block;
+
     margin: 20px auto 50px auto;
+
     border-radius: 8px;
+
     border: rgb(220,164,19);
+
     border-style: solid;  
+
     box-shadow: 7px 7px 5px rgba(200, 200, 200, 0.5); 
+
 }
+
 .profitable-graphs {
+
     margin: 20px;
+
 }
+
 .profit-bold {
+
     
+
 }
+
 .generated-returns-sentence {
+
     margin-bottom: 10px;
+
 }
+
 .reported-violations p {
+
     margin-bottom: 0;
+
 }
+
 .presentations-section {    
+
     padding-top: 100px;
+
     padding-bottom: 70px;        
+
        
+
 }
+
 .presentations {    
+
     background-color: rgba(200, 200, 200, 0.3);
+
     border-radius: 10px;
+
     padding: 20px; 
+
     padding-left: 40px;   
+
     border-style: solid;
+
     border-color: rgb( 220, 164, 19);    
+
     margin-left: 300px;
+
     margin-right: 300px;
+
 }
+
 .modern-slavery-presentation{
+
     background-color: rgba(200, 200, 200, 0.3);
+
     border-radius: 10px;
+
     padding: 20px; 
+
     padding-left: 40px;   
+
     border-style: solid;
+
     border-color: rgb( 220, 164, 19);        
+
 }
+
 .president-letter-title {
+
     text-align: left;
+
     margin-bottom: 20px;
+
     margin-top: 20px;        
+
 }
+
 .april-corporate-presentation-title {
+
     margin-top: 20px;
+
     text-align: left;
+
     margin-bottom: 20px;    
+
 }
+
 .presidents-letter-title a {
+
     font-size: 25px;
+
 }
+
 .april-corporate-presentation-title a {
+
     font-size: 25px;
+
 }
+
 .april-corporate-presentation-title h2 {
+
     font-size: 25px;
+
 }
+
 .presidents-letter-title h2 {
+
     font-size: 25px;
+
 }
+
 .westbrick-president-letter-1{
+
     margin: 0 auto;
+
     display: block;
+
     width: 1600px;
+
     max-width: 100%;    
+
 }
+
 .westbrick-president-letter-2{
+
     margin: 0 auto;
+
     display: block;
+
     max-width: 100%;
+
 }
+
 .operations-by-the-numbers {
+
     text-decoration: underline;
+
     text-decoration-color: rgb( 220, 164, 19);
+
 }
+
 .total-drilling-inventory-table {
+
     margin: 0 auto;
+
     display: block;
+
     width: 900px;
+
     max-width: 100%;
+
 }
+
 .drilling-inventory-section {
+
     padding: 120px;
+
     padding-left: 300px;    
+
     padding-right: 300px;    
+
 }
+
 .drilling-inventory-list {
+
     font-size: 22px;
+
     padding-top: 40px;            
+
 }
+
 .drilling-inventory-list li {    
+
     list-style-type: disc; 
+
 }
+
 .drilling-inventory-list li::marker {
+
     color: rgb( 220, 164, 19);
+
 }
+
 .drilling-inventory-table-2 {
+
     max-width: 100%;
+
     
+
     /* width: 500px; */
+
     /* padding-top: 100px;
+
     margin: 0 auto;
+
     display: block;     */
+
 }
+
 .drilling-inventory-tables {
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
 }
+
 .drilling-inventory-title {
+
     font-size: 50px;
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
     font-weight: bold;    
+
     padding-bottom: 30px;
+
 }
+
 .drilling-inventory-title-full {
+
     
+
 }
+
 .financial-lookback-table {
+
     width: 300px;
+
 }
+
 .financial-lookback-table-1 {
+
     width: 320px;
+
 }
+
 .financial-lookback-table-2 {
+
 }
+
 .financial-lookback-section {
+
     padding-top: 100px;
+
     padding-bottom: 100px;  
+
     padding-left: 200px;      
+
     padding-right: 150px;
+
 }
+
 .performance-track-record-section {
+
     background-color: #F9F9F9;
+
 }
+
 .year-end-reserves-section {
+
     padding-top: 100px;
+
     padding-bottom: 100px;
+
     padding-left: 200px;
+
     padding-right: 300px;
+
 }
+
 .company-interest-reserves-table {
+
     width: 600px;
+
     display: block;
+
     margin: auto;
+
     margin-bottom: 20px;
+
     max-width: 90%;
+
 }
+
 .pdp-growth-graph {
+
     width: 500px;
+
     display: block;
+
     margin: auto;
+
     max-width: 90%;
+
 }
+
 .pdp-tech-revisions-graph {
+
     width: 500px;
+
     display: block;
+
     margin: auto;
+
     margin-top: 20px;
+
     max-width: 90%;
+
 }
+
 .financial-lookback-title {
+
     font-size: 60px;
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
     font-weight: bold;
+
     margin-top: 0px;
+
 }
+
 .after-tax-return-title {
+
     color: rgb( 220, 164, 19);
+
     font-size: 26px;
+
     font-weight: bold;
+
 }
+
 .after-tax-return-table {
+
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+
     font-size: 24px;
+
     font-weight: bold;
+
 }
+
 .after-tax-return-table p {
+
     margin-top: 2px;
+
     margin-bottom: 2px;
+
     line-height: 25px;
+
 }
+
 .after-tax-return-list {
+
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+
     padding-top: 40px;
+
     font-size: 24px;
+
     padding-left: 22px;
+
     line-height: normal;
+
 }
+
 .after-tax-return-list li{
+
     padding-top: 10px;
+
 }
+
 .after-tax-return-list li::marker{
+
     color: rgb( 220, 164, 19);
+
 }
+
 .year-end-reserves-list {
+
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+
     font-size: 24px;
+
 }
+
 .year-end-reserves-list li::marker {
+
     color: rgb( 220, 164, 19);
+
 }
+
 .westbrick-sideways-hats {
+
     width: 50px;
+
 }
+
 .elementary-school-image {
+
     margin-top: 30px;
+
 }
+
 .year-end-reserves-title {
+
     font-size: 40px;
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
     font-weight: bold;
+
     margin-top: 0px;
+
 }
+
 .presentations-president-letter {
+
     margin-top: 50px;
+
 }
+
 .join-us-section-heading {
+
     font-size: 16px;
+
 }
+
 .join-us-section-heading .section_heading{
+
     margin-bottom: 19px;
+
 }
+
+
+
 @media screen and (min-width: 2000px) {
+
     .significant-delineations-section {
+
         padding-left: 100px;        
+
     }
+
     .operating-philosophy-section {
+
         padding-left: 100px; 
+
     }
+
 }
+
 @media screen and (min-width: 2400px) {
+
     .significant-delineations-section {
+
         padding-left: 200px;        
+
     }
+
     .operating-philosophy-section {
+
         padding-left: 200px; 
+
     }
+
 }
+
 @media screen and (min-width: 2800px) {
+
     .significant-delineations-section {
+
         padding-left: 300px;        
+
     }
+
     .operating-philosophy-section {
+
         padding-left: 300px; 
+
     }
 
+
+
 }
+
 @media screen and (max-width: 1800px) {
+
     .significant-delineations-map {
+
         margin-left: 40px;
+
     }
+
 }
+
 @media screen and (max-width: 1700px) {
+
     .significant-delineations-map {
+
         margin-left: 40px;
+
     }
+
     .operating-philosophy-graph {
+
         width: 47vw;
+
     }
+
 }
+
 @media screen and (max-width: 1600px) {
+
     .significant-delineations-map {
+
         margin-left: 40px;
+
     }
+
     .drilling-inventory-section {
+
         padding-left: 100px;
+
         padding-right: 100px;
+
     }
+
 }
+
 @media screen and (max-width: 1500px) {
+
     .financial-lookback-section {
+
         padding-left: 50px;
+
         padding-right: 50px;
+
     }
+
     .financial-lookback-table-1 {
+
         display: block;
+
         margin: 0 auto;
+
     }
+
     .financial-lookback-table-2 {
+
         display: block;
+
         margin: 0 auto;
+
     }
+
     .year-end-reserves-section {
+
         padding-left: 100px;
+
         padding-right: 100px;
+
     }
+
 }
+
 @media screen and (max-width: 1400px) {
+
     .westbrick-footer-logo {
+
         width: 350px;
+
     }
+
     .track-record-section {
+
         margin-left: 100px;
+
         margin-right: 100px;
+
     }
+
     .geological-advantages-checklist {
+
         font-size: 18px;
+
     }
+
     .geographical-advantages-checklist {
+
         font-size: 18px;
+
     }
+
     .significant-delineations-map {
+
         
+
     }
+
     .significant-delineations-title {
+
         margin-left: 40px;
+
     }
+
     .operating-philosophy-graph {
+
         width: 47vw;
+
     }
+
 }
+
 @media screen and (max-width: 1200px) { 
+
     .drilling-inventory-table-2 {
+
         margin-top: 20px;
+
     }
+
     .presentations {
+
         margin-left: 50px;
+
         margin-right: 50px;
+
     }
+
     .westbrick-is {
+
         margin-top: 40px;
+
         width: 400px;  
+
         height: 240px;      
+
         max-width: 100%;
+
     }
+
     .divider {
+
         display: none;
+
         margin: 0 auto;
+
     }
+
     .article-image {
+
         margin-left: -40px;
+
     }
+
     .gs_about_section {
+
         padding-top: 400px;
+
     }
+
     .experienced-team-title {
+
         font-size: 40px;
+
     }   
+
     .environment-svg {
+
         margin-top: 10px;
+
     }
+
     .westbrick-footer-logo {
+
         width: 300px;
+
     }
+
     .westbrick-derrick-sunrise {
+
         width: 400px;
+
         max-width: 100%;
+
     }    
+
     .members-of-the-community-bottom-image {
+
         width: 400px;
+
         max-width: 100%;
+
     }
+
     .minimizing-environmental-impact-bottom-image {
+
         max-width: 100%;
+
     }
+
      .geological-advantages {
+
         margin: 10px auto;
+
         display: block;
+
         align-items: center; 
+
      }
+
      .geographical-advantages {
+
         margin: 10px auto;
+
         display: block;
+
         align-items: center;                
+
      }
+
      .significant-delineations-map { 
+
         width: 40vw;        
+
      }
+
      .alberta-words-image {
+
         display: block;
+
         margin-left: auto;
+
         margin-right: auto;
+
         max-width: 100%;        
+
      }
+
      .geological-advantages-checklist {
+
         font-size: 22px;
+
     }
+
     .geographical-advantages-checklist {
+
         font-size: 22px;
+
     }
+
     .significant-delineations-map {
+
         margin: 0 auto;
+
     }
+
     .significant-delineations-title {
+
         text-align: center;
+
         margin-left: 0;
+
     }
+
     .members-impact-picture {
+
         width: 220px;
+
         margin-bottom: 20px;
+
     }
+
 }
+
 @media screen and (max-width: 992px) {
+
     .drilling-inventory-section {
+
         padding-left: 10px;
+
         padding-right: 10px;
+
     }
+
     .westbrick-sideways-hats {
+
         display: none;
+
     }
+
     .gs_footer_section .widget .widget-title {
+
         margin-bottom: 0px;
+
         text-decoration-thickness: 3px;
+
         text-decoration-line: underline;
+
         text-decoration-color: rgba(220, 164, 19, 1);              
+
     }
+
     .gs_footer_section .widget .widget-title:after {
+
         background-color: rgba(220, 164, 19, 0);
+
     }
+
     .gs_footer_section {
+
         text-align: center;
+
     }
+
     .emergency-contact-footer {
+
         margin-top: 0px;
+
         text-align: center;
+
         margin-bottom: 20px;
+
     }
+
     .westbrick-is {
+
         width: 600px;  
+
         height: 340px;      
+
         max-width: 100%;
+
     }
+
     .article-image {
+
         display: block;
+
         margin: 40px auto;
+
     }
+
     .gs_page_banner{
+
         background:#111 url("../images/westbrick/Westbrick_slider01-992.jpg") no-repeat;
+
         background-size: cover;
+
         background-position: center center;
+
     }
+
     .operations-banner{
+
         background:#111 url("../images/westbrick/beautiful-winter-992.jpg") no-repeat;
+
     }
+
     .esg-page-banner{
+
         background:#111 url("../images/westbrick/under-construction-992.jpg") no-repeat;
+
     }
+
     .community-page-banner {
+
         background:#111 url("../images/westbrick/community-960.jpg") no-repeat;
+
     }
+
     .governance-page-banner {
+
         background:#111 url("../images/westbrick/governance-992.jpg") no-repeat;
+
     }
+
     .investors-page-banner {
+
         background:#111 url("../images/westbrick/investors-992.jpg") no-repeat;
+
     }
+
     .contact-page-banner {
+
         background:#111 url("../images/westbrick/contact-992.jpg") no-repeat;
+
     }
+
     .about_thumb {
+
         display: none;
+
     }
+
     .westbrick-footer-logo {
+
         margin-bottom: 50px;
+
     }
+
     .westbrick-footer-logo {
+
         width: 300px;
+
         display: block;
+
         margin: 0 auto;
+
     }
+
     .profit-graph {
+
         width: 250px;
+
         display: block;
+
         margin: 0 auto;
+
     }
+
     .track-record-notes {
+
         line-height: normal;
+
     }
+
     .track-record-section {
+
         margin-left: 20px;
+
         margin-right: 20px;
+
     }
+
     .track-record-graph {
+
         width: 100%;
+
     }
+
     .operating-philosophy-graph {
+
         width: 100%;
+
     }
+
     .members-impact-picture {
+
         width: 350px;
+
     }
+
     .divider {
+
         display: none;
+
         margin: 0 auto;
+
     }
+
     .the-westbrick-way-image {
+
         display: block;
-        margin: 20px auto;
-    }
-    .about-pic {
-        display: block;
-        margin: 0 auto;
-    }    
-    .minimizing-environmental-impact-bottom-image {
-        width: 400px;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-    .members-of-the-community-bottom-image {
-        margin-top: 0;
-    }
-}
-@media screen and (max-width: 768px) { 
-    .staff-member {
-        padding-right: 0px;
-    }
-    .drilling-inventory-section {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-    .year-end-reserves-section {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    .background-watermark {
-        background-image: url(../images/westbrick/westbrick-normal-transparent.svg);    	       
-    }
-    .meet-us-top-section {
-        width: 100% !important;
-    }
-    .about-blurb {
-        margin-bottom: 90px;
-    }
-    .gs_about_section {
-        
-    }    
-    .about_thumb {
-        display: none;
-    }
-    .experienced-team {
-        padding: 20px;
-    }
-    .track-record-notes {
-        color: #919191;
-        font-size: 12px;
-    }
-    .track-record-graph {
-        
-    }
-    .geographical-advantages {
+
         margin: 20px auto;
 
     }
-    .geological-advantages {
-        margin: 20px auto;
-    }
-    .the-westbrick-way-image {
-        max-width: 100%;
-    }
-    .divider {
-        display: none;
-        margin: 0 auto;
-    }
-    .contact-list-main h4{
-        font-size: 11px;
-    }  
-    .financial-reporting{
-        padding: 10px;
-    }  
-    .join-us-section-heading {
-        margin-top: 40px;
-    }  
-    .banner_slider .slides {
-        height: 100%;
-    }  
-    .gs_middle_header {
-        justify-content:center        
-    }
-    .gs_header_contacts{
-        
-    }
-    .con_details h4 {        
-        font-size: 16px;        
-        
-    }
-    .con_details p {        
-        font-size: 16px;        
-        
-    }    
-    .slider_caption h2{
-        font-size: 18px !important;
-        padding: 15px;
-    }   
-    .profitable-business-map {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }    
-    .profitable-stats {
-        margin-left: 0;
-    }    
+
     .about-pic {
+
         display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-    }
-    .members-impact-picture {
-        width: 100%;
-    }
-    .westbrick-logo {        
-        width: 70vw;
-        max-width: 80%;
+
         margin: 0 auto;
-        display: block;
-    }
-    .significant-delineations-full-title {
-        
-    }
-     .significant-delineations-title {
-        
-    }
-     .operating-philosophy-full-left {
-        margin: 0px 0px;
-        padding: 0px;
-    }
-     .operating-philosophy-graph {
-        width: 100%;
-    }
-    .geographical-advantages-checklist {
-        font-size: 22px;
-    }
-    .geological-advantages-checklist {
-        font-size: 22px;
-    }
-    .operating-philosophy-title {
-        font-size: 40px;
-    }
-    .significant-delineations-map {
-        width: 70vw;
-    }
-    .significant-delineations-main-title {
-        font-size: 28px;        
-    }
-}
-@media screen and (max-width: 576px) {
-    .presentations {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    .drilling-inventory-section {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    .financial-lookback-section {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    .esg-titles {
-        margin-left: 0;
-        padding-left: 0;
-    }
-    .staff-member:nth-child(2n+1) {
-        background-color: rgba(0, 0, 0, 0); 
-    }
-    .about-blurb {
-        font-size: 17px;
-    }
-    .westbrick-is {
-        height: auto;
-    }
-    .profitable-business-title {
-        font-size: 40px;
-    }
-    .article-image {
-        max-width: 90%;
-    }
-    .management-team-svg {
-        max-width: 90vw;
-    }
-    .governance-svg {
-        display: none;
-    }
-    .governance-esg {
-        padding-left: 0px;
-    }
-    .community-svg {
-        display: none;
-    }
-    .community-esg {
-        padding-left: 0px;
-    }
-    .safety-svg {
-        display: none;
-    }
-    .safety-esg {
-        padding-left: 0px;
-    }
-    .environment-svg {
-        display: none;
-    }
-    .environment-esg {
-        padding-left: 0px;
-    }
-    .track-record-title {
-        font-size: 22px;
-    }
-    .track-record-pre-title {
-        font-size: 18px;
-    }
-    .significant-delineations-full-title {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    .significant-delineations-pre-title {
-        color: #919191;
-    }
-    .geographical-advantages-checklist {
-        font-size: 22px;
-    }
-    .geological-advantages-checklist {
-        font-size: 22px;
-    }
-    .significant-delineations-main-title {
-        font-size: 28px; 
-    }
-    .significant-delineations-title {
-       font-size: 14px;
+
     }    
+
+    .minimizing-environmental-impact-bottom-image {
+
+        width: 400px;
+
+        margin-top: 0;
+
+        margin-bottom: 0;
+
+    }
+
+    .members-of-the-community-bottom-image {
+
+        margin-top: 0;
+
+    }
+
+}
+
+@media screen and (max-width: 768px) { 
+
+    .staff-member {
+
+        padding-right: 0px;
+
+    }
+
+    .drilling-inventory-section {
+
+        padding-left: 50px;
+
+        padding-right: 50px;
+
+    }
+
+    .year-end-reserves-section {
+
+        padding-left: 10px;
+
+        padding-right: 10px;
+
+    }
+
+    .background-watermark {
+
+        background-image: url(../images/westbrick/westbrick-normal-transparent.svg);    	       
+
+    }
+
+    .meet-us-top-section {
+
+        width: 100% !important;
+
+    }
+
+    .about-blurb {
+
+        margin-bottom: 90px;
+
+    }
+
+    .gs_about_section {
+
+        
+
+    }    
+
+    .about_thumb {
+
+        display: none;
+
+    }
+
+    .experienced-team {
+
+        padding: 20px;
+
+    }
+
+    .track-record-notes {
+
+        color: #919191;
+
+        font-size: 12px;
+
+    }
+
+    .track-record-graph {
+
+        
+
+    }
+
+    .geographical-advantages {
+
+        margin: 20px auto;
+
+
+
+    }
+
+    .geological-advantages {
+
+        margin: 20px auto;
+
+    }
+
+    .the-westbrick-way-image {
+
+        max-width: 100%;
+
+    }
+
+    .divider {
+
+        display: none;
+
+        margin: 0 auto;
+
+    }
+
+    .contact-list-main h4{
+
+        font-size: 11px;
+
+    }  
+
+    .financial-reporting{
+
+        padding: 10px;
+
+    }  
+
+    .join-us-section-heading {
+
+        margin-top: 40px;
+
+    }  
+
+    .banner_slider .slides {
+
+        height: 100%;
+
+    }  
+
+    .gs_middle_header {
+
+        justify-content:center        
+
+    }
+
+    .gs_header_contacts{
+
+        
+
+    }
+
+    .con_details h4 {        
+
+        font-size: 16px;        
+
+        
+
+    }
+
+    .con_details p {        
+
+        font-size: 16px;        
+
+        
+
+    }    
+
+    .slider_caption h2{
+
+        font-size: 18px !important;
+
+        padding: 15px;
+
+    }   
+
+    .profitable-business-map {
+
+        display: block;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }    
+
+    .profitable-stats {
+
+        margin-left: 0;
+
+    }    
+
+    .about-pic {
+
+        display: block;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        width: 100%;
+
+    }
+
+    .members-impact-picture {
+
+        width: 100%;
+
+    }
+
+    .westbrick-logo {        
+
+        width: 70vw;
+
+        max-width: 80%;
+
+        margin: 0 auto;
+
+        display: block;
+
+    }
+
+    .significant-delineations-full-title {
+
+        
+
+    }
+
+     .significant-delineations-title {
+
+        
+
+    }
+
+     .operating-philosophy-full-left {
+
+        margin: 0px 0px;
+
+        padding: 0px;
+
+    }
+
+     .operating-philosophy-graph {
+
+        width: 100%;
+
+    }
+
+    .geographical-advantages-checklist {
+
+        font-size: 22px;
+
+    }
+
+    .geological-advantages-checklist {
+
+        font-size: 22px;
+
+    }
+
+    .operating-philosophy-title {
+
+        font-size: 40px;
+
+    }
+
+    .significant-delineations-map {
+
+        width: 70vw;
+
+    }
+
+    .significant-delineations-main-title {
+
+        font-size: 28px;        
+
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    .presentations {
+
+        margin-left: 10px;
+
+        margin-right: 10px;
+
+    }
+
+    .drilling-inventory-section {
+
+        padding-left: 10px;
+
+        padding-right: 10px;
+
+    }
+
+    .financial-lookback-section {
+
+        padding-left: 10px;
+
+        padding-right: 10px;
+
+    }
+
+    .esg-titles {
+
+        margin-left: 0;
+
+        padding-left: 0;
+
+    }
+
+    .staff-member:nth-child(2n+1) {
+
+        background-color: rgba(0, 0, 0, 0); 
+
+    }
+
+    .about-blurb {
+
+        font-size: 17px;
+
+    }
+
+    .westbrick-is {
+
+        height: auto;
+
+    }
+
+    .profitable-business-title {
+
+        font-size: 40px;
+
+    }
+
+    .article-image {
+
+        max-width: 90%;
+
+    }
+
+    .management-team-svg {
+
+        max-width: 90vw;
+
+    }
+
+    .governance-svg {
+
+        display: none;
+
+    }
+
+    .governance-esg {
+
+        padding-left: 0px;
+
+    }
+
+    .community-svg {
+
+        display: none;
+
+    }
+
+    .community-esg {
+
+        padding-left: 0px;
+
+    }
+
+    .safety-svg {
+
+        display: none;
+
+    }
+
+    .safety-esg {
+
+        padding-left: 0px;
+
+    }
+
+    .environment-svg {
+
+        display: none;
+
+    }
+
+    .environment-esg {
+
+        padding-left: 0px;
+
+    }
+
+    .track-record-title {
+
+        font-size: 22px;
+
+    }
+
+    .track-record-pre-title {
+
+        font-size: 18px;
+
+    }
+
+    .significant-delineations-full-title {
+
+        margin-left: 20px;
+
+        margin-right: 20px;
+
+    }
+
+    .significant-delineations-pre-title {
+
+        color: #919191;
+
+    }
+
+    .geographical-advantages-checklist {
+
+        font-size: 22px;
+
+    }
+
+    .geological-advantages-checklist {
+
+        font-size: 22px;
+
+    }
+
+    .significant-delineations-main-title {
+
+        font-size: 28px; 
+
+    }
+
+    .significant-delineations-title {
+
+       font-size: 14px;
+
+    }    
+
     .operating-philosophy-full-left {     
 
+
+
     }
+
     .operating-philosophy-list {
+
         font-size: 18px;
+
     }
+
     .operating-philosophy-section .container-fluid{
+
         padding: 0;
+
     }
+
     .operating-philosophy-graph {
+
         width: 400px;
+
         margin-left: -80px;
+
         margin: 0 auto;
+
     }
+
     .significant-delineations-map {
+
         width: 100vw;
+
     }    
+
 }
+
 @media screen and (max-width: 476px) {
+
     .operating-philosophy-title {
+
         font-size: 30px;
+
     }
+
     .operating-philosophy-graph {
+
         width: 100%;
+
     }
+
     .operating-philosophy-row {
+
         margin-left: 20px;
+
         margin-right: 20px;
+
     }
+
     .geographical-advantages-checklist {
+
         font-size: 20px;
+
     }
+
     .geological-advantages-checklist {
+
         font-size: 20px;
+
     }
+
 }
+
 @media screen and (max-width: 476px) {
+
     .geographical-advantages-checklist {
+
         font-size: 18px;
+
     }
+
     .geological-advantages-checklist {
+
         font-size: 18px;
+
     }
+
+}
+
+.major-news{
+    color: red !important;
+    margin-top: 35px;
+    font-size: 30px !important;
+    font-weight: bold;
+    margin-bottom: 15px !important;
 }
